@@ -25,6 +25,11 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('./dist/'))
 })
 
+gulp.task('images', function() {
+  return gulp.src('./src/images/*.jpg')
+    .pipe(gulp.dest('./dist/images/'))
+})
+
 gulp.task('js', function(){
   return gulp.src('./src/js/index.js')
     .pipe( webpack({ output : { filename : 'index.js' }}))
@@ -39,9 +44,9 @@ gulp.task('browser-sync', function() {
   })
 })
 
-gulp.task('build', ['stylus','jade','js'])
+gulp.task('build', ['stylus','jade','js','images'])
 
-gulp.task('go', ['stylus','jade','js','browser-sync'], function() {
+gulp.task('go', ['stylus','jade','js','images','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
   gulp.watch('./src/views/**/*.jade', ['jade', reload])
   gulp.watch('./src/js/**/*.js', ['js', reload])
