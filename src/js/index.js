@@ -15,6 +15,8 @@ var app = {
 require('./lib/window-controller')(app)
 require('./lib/dimensions-controller')(app)
 
+require('./animations')(app)
+
 domready(function(){
   console.log('hello, pluto!')
   app.msgs.emit('ready')

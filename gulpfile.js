@@ -9,6 +9,9 @@ var gulp = require('gulp')
   , concat = require('gulp-concat')
   , stylus = require('gulp-stylus')
   , koutoSwiss = require('kouto-swiss')
+  , path = require('path')
+
+console.log( path.join(__dirname + 'vendor'))
 
 var slidesData = require('./src/data/slides.js')
 
@@ -32,7 +35,19 @@ gulp.task('images', function() {
 
 gulp.task('js', function(){
   return gulp.src('./src/js/index.js')
-    .pipe( webpack({ output : { filename : 'index.js' }}))
+    .pipe(webpack({ 
+      output : { filename : 'index.js' },
+      loaders: [
+        { test: require.resolve('jquery'), loader: 'imports?jQuery=jquery' },
+      ],
+      resolve : {
+        alias: {
+          TweenMax : path.join(__dirname +  '/src/vendor/gsap/src/uncompressed/TweenMax.js'),
+          TweenLite : path.join(__dirname + '/src/vendor/gsap/src/uncompressed/TweenLite.js'),
+          TimelineMax : path.join(__dirname + '/src/vendor/gsap/src/uncompressed/TimelineMax.js')
+        }
+      }
+    }))
     .pipe(gulp.dest('./dist/js/'))
 })
 
