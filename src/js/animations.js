@@ -5,9 +5,11 @@ var internals = {}
 
 
 internals.init = function(app){
-  var c = new ScrollMagic() 
-
-  console.log( c )
+  var controller = new ScrollMagic() 
+  controller.addScene([
+    require('./scenes/1848'),
+    require('./scenes/1905')
+  ])
 }
 
 module.exports = internals.init
