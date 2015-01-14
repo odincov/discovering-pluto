@@ -32,3 +32,5 @@ node_modules
 # Distributive files
 dist
 
+# bower vendor files
+src/vendor
