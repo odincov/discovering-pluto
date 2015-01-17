@@ -29,7 +29,7 @@ gulp.task('jade', function() {
 })
 
 gulp.task('images', function() {
-  return gulp.src('./src/images/*.jpg')
+  return gulp.src('./src/images/*.*')
     .pipe(gulp.dest('./dist/images/'))
 })
 

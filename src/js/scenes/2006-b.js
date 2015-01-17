@@ -1,13 +1,13 @@
 var ScrollScene = require('../../vendor/ScrollMagic/js/jquery.scrollmagic').Scene
 
 var scene = new ScrollScene({ 
-  triggerElement : '.slide--1905',
+  triggerElement : '.slide--2006-b' 
 })
 .offset(200)
-.setTween(TweenMax.from('.slide__bg--1905', 1, { 
+.setTween(TweenMax.from('.slide__bg--2006-b', 1, { 
   opacity: 0,
-  scale: 1.25,
-  ease: Expo.easeOut
+  scale: 1.1,
+  ease: Quart.easeOut
 }))
 
 module.exports = scene
