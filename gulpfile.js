@@ -10,6 +10,7 @@ var gulp = require('gulp')
   , stylus = require('gulp-stylus')
   , koutoSwiss = require('kouto-swiss')
   , path = require('path')
+  , iconify = require('gulp-iconify')
 
 gulp.task('stylus', function () {
   return gulp.src('./src/stylus/main.styl')
@@ -32,6 +33,13 @@ gulp.task('jade', function() {
 gulp.task('images', function() {
   return gulp.src('./src/images/*.*')
     .pipe(gulp.dest('./dist/images/'))
+})
+
+gulp.task('iconify', function() {
+  return iconify({
+    src: './src/icons/*.svg',
+    cssOutput: './dist/css'
+  })
 })
 
 gulp.task('js', function(){
