@@ -1,3 +1,32 @@
-h2 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
   color $base-font-color
+  font-family $font--headlines
+
+h1
+  text-transform uppercase
+  font-weight 100
+  letter-spacing 0.1em
   font-size $beta-size
+  +media-query( $screen, $bp--desktop )
+    font-size $mega-size
+    
+h1 span 
+  display block
+  font-weight 900
+  font-size $kilo-size
+  margin-top .15em
+  +media-query( $screen, $bp--desktop )
+    margin-top auto
+    font-size $giga-size
+  
+h2 
+  font-family $font--main 
+  color $base-font-color
+  font-size $zeta-size
+  +media-query( $screen, $bp-desktop )
+    font-size $epsilon-size

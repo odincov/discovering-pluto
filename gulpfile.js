@@ -11,10 +11,6 @@ var gulp = require('gulp')
   , koutoSwiss = require('kouto-swiss')
   , path = require('path')
 
-console.log( path.join(__dirname + 'vendor'))
-
-var slidesData = require('./src/data/slides.js')
-
 gulp.task('stylus', function () {
   return gulp.src('./src/stylus/main.styl')
     .pipe(stylus({ use: [ koutoSwiss() ] }))
@@ -24,7 +20,12 @@ gulp.task('stylus', function () {
 
 gulp.task('jade', function() {
   return gulp.src('./src/views/pages/*.jade')
-    .pipe(jade({ locals: { slides : slidesData }}))
+    .pipe(jade({ 
+      locals: { 
+        intro : require('./src/data/intro.js'),
+        slides : require('./src/data/slides.js')
+      }
+    }))
     .pipe(gulp.dest('./dist/'))
 })
 

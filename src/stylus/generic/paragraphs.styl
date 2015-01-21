@@ -1,6 +1,7 @@
 p
+  font-family $font--main
   color $base-font-color
-  line-height $gamma-size
+  line-height 1.6em
   font-size $epsilon-size
- 
- 
+  +media-query( $screen, $bp--desktop )
+    font-size $delta-size
