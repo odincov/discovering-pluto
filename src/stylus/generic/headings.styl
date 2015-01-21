@@ -12,6 +12,9 @@ h1
   font-weight 100
   letter-spacing 0.1em
   font-size $beta-size
+  margin-bottom 0
+  +media-query( $screen, $bp--tablet )
+    font-size $kilo-size
   +media-query( $screen, $bp--desktop )
     font-size $mega-size
     
@@ -20,6 +23,10 @@ h1 span
   font-weight 900
   font-size $kilo-size
   margin-top .15em
+  +media-query( $screen, $bp--tablet )
+    font-size $sup-sup-giga-size
+  +media-query( $screen, $bp--tablet--landscape )
+    font-size $sup-giga-size
   +media-query( $screen, $bp--desktop )
     margin-top auto
     font-size $giga-size
@@ -27,6 +34,7 @@ h1 span
 h2 
   font-family $font--main 
   color $base-font-color
-  font-size $zeta-size
+  font-size $epsilon-size
+  margin-top 1em
   +media-query( $screen, $bp-desktop )
     font-size $epsilon-size
