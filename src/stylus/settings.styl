@@ -1,6 +1,55 @@
-/***
-  * Font-sizes
-  */
+//
+// SETTINGS
+// ========
+// Project specific setings which can be changed to modify the basic look and
+// feel of the project with little effort.
+//
+// 1. BREAKPOINTS AND MEDIA QUERIES
+// 2. COLOURS
+// 3. TYPEFACES
+// 4. FONT SIZES
+// 5. BASE STYLES
+// 6. GRID
+// 7. DEBUG STYLING
+// 8. DEFAULT ENVIRONMENT
+//
+
+//
+// 1. BREAKPOINTS AND MEDIA QUERIES
+// Setup standard widths to pass to media queries
+//
+
+$bp--mobile--portrait  = min-width 0px
+$bp--mobile--landscape = min-width 400px
+$bp--tablet--portrait  = min-width 550px
+$bp--tablet--landscape = min-width 767px
+$bp--desktop--small    = min-width 1024px
+$bp--desktop--medium   = min-width 1280px
+$bp--desktop--large    = min-width 1600px
+
+// Common aliases
+$bp--mobile  = $bp--mobile--portrait
+$bp--tablet  = $bp--tablet--portrait
+$bp--desktop = $bp--desktop--small
+
+//
+// 2. COLOURS
+//
+
+$color--red = #e9424e
+$color--dark = #2d2f30
+$color--black = #333333
+$color--white = #ffffff
+
+//
+// 3. TYPEFACES
+//
+
+$font--main = ''
+
+//
+// 4. FONT SIZES
+//
 
 $giga-size = rem(96px)
 $mega-size = rem(72px)
@@ -16,22 +65,41 @@ $zeta-size = rem(14px)
 $milli-size = rem(12px)
 $micro-size = rem(10px)
 
-/***
-  * Base stuff
-  */
+//
+// 5. BASE STYLES
+//
+
+$base--font-heading = $font--main
+$base--font-body    = $font--main
+$base--font-color   = $color--black
+$base--font-size    = $zeta-size
+$base--line-height  = 1.333
+$base--spacing      = ($base--line-height)em
+$base--body-bg      = $color--white
+$base--brand-bg     = $color--red
 
 $base-font-size = $zeta-size
 $base-line-height = $gamma-size
-
-/***
-  * Base font-family.
-  */
-
+$base-font-color = white
 $base-font-family = sans-serif
 
+//
+// 6. GRID
+//
 
-/***
-  * Colors
-  */
+//
+// 7. DEBUG STYLING
+//
 
-$base-font-color = white
+$debug--mode = false
+
+//
+// 8. DEFAULT ENVIRONMENT
+// Projects may optionally pass through an environment variable to dictate
+// whether development specific stylesheets are compiled into the final CSS.
+// Set this variable to anything other than 'development' to manually override.
+//
+
+$environment ?= 'development'
+
+
