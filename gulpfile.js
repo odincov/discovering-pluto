@@ -24,7 +24,12 @@ gulp.task('jade', function() {
     .pipe(jade({ 
       locals: { 
         intro : require('./src/data/intro.js'),
-        slides : require('./src/data/slides.js')
+        slides : require('./src/data/slides.js'),
+        subscribeView : require('./src/data/subscribe.js'),
+        footer : require('./src/data/footer.js'),
+        links : require('./src/data/links.js'),
+        credits : require('./src/data/credits.js'),
+        references : require('./src/data/references.js')
       }
     }))
     .pipe(gulp.dest('./dist/'))

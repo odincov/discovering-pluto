@@ -1,0 +1,9 @@
+.subscribe-view.u-centering-wrapper
+  .u-center
+    h2= subscribeView['title']
+    p= subscribeView['content']
+    hr
+    p= subscribeView['invitation']
+    form
+      input(type='text', placeholder= subscribeView['email'])
+      button= subscribeView['send']
