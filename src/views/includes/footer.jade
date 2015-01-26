@@ -1,14 +1,36 @@
 footer.footer.u-centering-wrapper
   .u-cetner
-    h2= footer['links-title']
+    if links
+      h2.headline--m= footer['links-title']
+      
+      ul
+        for link in links
+          li
+            a(href= link[1] target='blank')= link[0]
 
     hr
+    
+    if credits
+      h2.headline--m= footer['credits-title']
+      h4.headline--xs= footer['credits-sub-title']
+      
+      dl
+        for credit in credits
+          dt= credit[0]
+          dl= credit[1]
+    
+    if gratitudes
+      h4.headline--xs= footer['gratitude']
+      ul
+        for gratitude in gratitudes
+          li= gratitude
 
-    h2= footer['credits-title']
-    h4= footer['credits-sub-title']
-
-    h4= footer['gratitude']
-
-    h4= footer['references']
+    if references
+      h4.headline--xs= footer['references']
+      
+      dl
+        for reference in references
+          dt= reference[0]
+          dl= reference[1]
 
     p= footer['copy-rights']

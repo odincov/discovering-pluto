@@ -3,11 +3,12 @@ h2,
 h3,
 h4,
 h5,
-h6 
+h6,
+.headline
   color $base-font-color
   font-family $font--headlines
 
-h1
+.headline--xxl
   text-transform uppercase
   font-weight 100
   letter-spacing 0.1em
@@ -18,7 +19,7 @@ h1
   +media-query( $screen, $bp--desktop )
     font-size $mega-size
     
-h1 span 
+.headline--xxl span
   display block
   font-weight 900
   font-size $kilo-size
@@ -31,8 +32,30 @@ h1 span
   +media-query( $screen, $bp--desktop--medium )
     margin-top auto
     font-size $giga-size
-  
-h2 
+
+.headline--l
+  text-transform uppercase
+  font-weight 100
+  letter-spacing 0.1em
+  font-size $beta-size
+  margin .75em 0
+  +media-query( $screen, $bp--tablet )
+    font-size $kilo-size
+  +media-query( $screen, $bp--desktop )
+    font-size $mega-size
+
+.headline--m
+  text-transform uppercase
+  font-weight 100
+  letter-spacing 0.1em 
+  font-size $gamma-size 
+  margin .75em 0
+  +media-query( $screen, $bp--tablet )
+    font-size $beta-size
+  +media-query( $screen, $bp--desktop )
+    font-size $alpha-size
+
+.headline--xs
   font-family $font--main 
   color $base-font-color
   font-size $epsilon-size

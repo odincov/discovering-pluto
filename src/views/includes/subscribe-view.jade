@@ -1,9 +1,13 @@
 .subscribe-view.u-centering-wrapper
-  .u-center
-    h2= subscribeView['title']
-    p= subscribeView['content']
+  .u-centered
+    h2.headline--l!= subscribeView['title']
+    p.subscribe__date= subscribeView['content']
     hr
-    p= subscribeView['invitation']
+    p.subscribe__text= subscribeView['invitation']
     form
-      input(type='text', placeholder= subscribeView['email'])
-      button= subscribeView['send']
+      .subscribe__form-group
+        input.subscribe__input(type='text', placeholder= subscribeView['email'])
+        button.subscribe__button= subscribeView['send']
+      label.subscribe__checkbox
+        input(type='checkbox')
+        span= subscribeView['sign-up-for-news']

@@ -4,4 +4,73 @@
   background-size cover
   background-position center
   position relative
-
+.subscribe__date
+  margin 0 auto
+  text-transform uppercase
+  font-size $milli-size
+  color $color--pale-white--dark
+  +media-query( $screen, $bp--tablet )
+    width 450px
+  +media-query( $screen, $bp--desktop )
+    width 535px
+    font-size $zeta-size
+.subscribe__text
+  margin 0 auto
+  font-size $zeta-size
+  color $color--pale-white--dark
+  +media-query( $screen, $bp--tablet )
+    width 550px
+  +media-query( $screen, $bp--desktop )
+    width 650px
+    font-size $epsilon-size
+.subscribe__input
+  box-sizing border-box
+  padding-left 1.25em
+  padding-right 1.25em
+  height 50px
+  font-size $zeta-size
+  line-height 50px
+  color $color--pale-white 
+  background #212125
+  border solid 1px #212125
+  border-left solid 1px #27272b
+  border-bottom solid 1px #29292d
+  width 100%
+  +placeholder()
+    font-size $milli-size
+    line-height 50px
+    font-weight 100
+    color #414346
+    text-transform uppercase
+    text-align center
+  +media-query( $screen, $bp--tablet )
+    width 70%
+    +placeholder()
+      text-align left
+.subscribe__button
+  width 100%
+  height 50px
+  font-size $zeta-size
+  color #fefefe
+  text-transform uppercase
+  background-image linear-gradient( 180deg, #0e78d7,  #0a51c3)
+  border none
+  border-top solid 1px #63a8e5
+  font-weight 300 
+  letter-spacing .15em
+  margin-top 1em
+  +media-query( $screen, $bp--tablet )
+    width 30%
+    margin-top auto
+.subscribe__form-group
+  margin 2em 5%
+  width 90%
+  +media-query( $screen, $bp--tablet )
+    width 500px
+    margin 2em auto
+  +media-query( $screen, $bp--desktop )
+    width 600px
+.subscribe__checkbox span
+  font-size $milli-size
+  color $color--pale-white--dark
+  padding-left .5em

@@ -29,7 +29,8 @@ gulp.task('jade', function() {
         footer : require('./src/data/footer.js'),
         links : require('./src/data/links.js'),
         credits : require('./src/data/credits.js'),
-        references : require('./src/data/references.js')
+        references : require('./src/data/references.js'),
+        gratitudes : require('./src/data/gratitudes.js')
       }
     }))
     .pipe(gulp.dest('./dist/'))
