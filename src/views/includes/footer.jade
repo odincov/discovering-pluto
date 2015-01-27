@@ -3,7 +3,7 @@ footer.footer.u-centering-wrapper
     if links
       h2.headline--m= footer['links-title']
       
-      ul
+      ul.footer-links
         for link in links
           li
             a(href= link[1] target='blank')= link[0]
@@ -12,25 +12,25 @@ footer.footer.u-centering-wrapper
     
     if credits
       h2.headline--m= footer['credits-title']
-      h4.headline--xs= footer['credits-sub-title']
+      h4.headline--xs.headline--pale-white--dark!= footer['credits-sub-title']
       
-      dl
+      dl.credits-list
         for credit in credits
           dt= credit[0]
           dl= credit[1]
     
     if gratitudes
-      h4.headline--xs= footer['gratitude']
-      ul
+      h4.headline--xs.headline--pale-white--dark= footer['gratitude']
+      ul.gratitudes-list
         for gratitude in gratitudes
           li= gratitude
 
     if references
-      h4.headline--xs= footer['references']
+      h4.headline--xs.headline--pale-white--dark= footer['references-title']
       
-      dl
+      dl.references-list
         for reference in references
-          dt= reference[0]
-          dl= reference[1]
+          dt= reference[0] 
+          dl  / #{reference[1]}. 
 
-    p= footer['copy-rights']
+    p.footer__copy= footer['copy-rights']

@@ -1,0 +1,19 @@
+.references-list
+  width 100%
+  +media-query( $screen, $bp--tablet )
+    width 550px
+  +media-query( $screen, $bp--desktop )
+    width 760px
+  margin 0 auto
+  padding 1em
+.references-list dt,
+.references-list dl
+  display inline
+  text-transform uppercase
+  font-family $font--main
+  line-height 1.5
+  font-size $zeta-size
+.references-list dt
+  color $color--pale-white
+.references-list dl
+  color $color--pale-white--dark
