@@ -8,10 +8,12 @@ function calcage(secs, num1, num2, leadingZero) {
 }
 
 function getCountdownTime(){
-  var currentDate = new Date()
-    , currentLocalTime = currentDate.getTime()
-    , currentLocalOffset = currentDate.getTimezoneOffset()*60000
-    , currentUTC = currentLocalTime + currentLocalOffset
+//   var currentDate = new Date()
+//       , currentLocalTime = currentDate.getTime()
+//       , currentLocalOffset = currentDate.getTimezoneOffset()*60000
+//       , currentUTC = currentLocalTime + currentLocalOffset
+
+  var currentUTC = new Date().getTime()
 
   var targetUTC = Date.UTC(2015, 06, 14, 11, 49, 59)
 
