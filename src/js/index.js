@@ -16,6 +16,7 @@ require('./lib/window-controller')(app)
 require('./lib/dimensions-controller')(app)
 
 require('./animations')(app)
+require('./countdown')(app)
 
 domready(function(){
   console.log('hello, pluto!')

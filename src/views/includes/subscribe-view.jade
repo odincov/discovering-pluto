@@ -1,6 +1,28 @@
 .subscribe-view.u-centering-wrapper
   .u-centered
     h2.headline--l!= subscribeView['title']
+    .timer
+      ul.timer__list
+        li
+          span.timer__number.timer__number--days
+          span.timer__title= subscribeView['counter']['day']
+        li
+          span.timer__number.timer__number--divider : 
+        li
+          span.timer__number.timer__number--hours
+          span.timer__title= subscribeView['counter']['hours']
+        li
+          span.timer__number.timer__number--divider : 
+        li
+          span.timer__number.timer__number--minutes
+          span.timer__title= subscribeView['counter']['minutes']
+        li
+          span.timer__number.timer__number--divider : 
+        li
+          span.timer__number.timer__number--seconds
+          span.timer__title= subscribeView['counter']['seconds']
+        
+
     p.subscribe__date= subscribeView['content']
     hr
     p.subscribe__text= subscribeView['invitation']

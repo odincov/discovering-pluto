@@ -1,0 +1,50 @@
+.timer
+  width 100%
+  float left
+  margin-bottom 3em
+.timer__list
+  font-family $font--headlines
+  color $color--white
+  margin 0 auto
+  width 282px
+  +media-query( $screen, $bp--tablet )
+    width 370px
+  +media-query( $screen, $bp--desktop )
+    width 650px    
+.timer__title
+  text-transform uppercase
+  font-size $micro-size
+.timer li
+  float left
+.timer li span
+  width 100%
+  display block
+.timer__number
+  font-size $kilo-size
+  +media-query( $screen, $bp--tablet )
+    font-size $mega-size
+  +media-query( $screen, $bp--desktop )
+    font-size $sup-sup-giga-size
+.timer__number--divider
+  font-size $beta-size
+  +media-query( $screen, $bp--desktop )
+    font-size $mega-size
+  text-align center
+  padding-left .25em
+  padding-right .25em
+  margin-top 10px
+  +media-query( $screen, $bp--tablet )
+    margin-top 13px
+  +media-query( $screen, $bp--desktop )
+    margin-top 16px
+.timer__number--seconds
+  font-weight 100
+.timer__number--days,
+.timer__number--hours,
+.timer__number--minutes,
+.timer__number--seconds
+  min-width 50px
+  +media-query( $screen, $bp--tablet )
+    min-width 75px
+  +media-query( $screen, $bp--desktop )
+    min-width 125px
