@@ -43,7 +43,19 @@ h6,
     font-size $kilo-size
   +media-query( $screen, $bp--desktop )
     font-size $mega-size
-
+    
+.headline--slide
+  text-transform uppercase
+  font-weight 400
+  letter-spacing 0.1em
+  font-size $beta-size
+  margin .25em 0
+  +media-query( $screen, $bp--tablet )
+    font-size $kilo-size
+  +media-query( $screen, $bp--desktop )
+    font-size $kilo-size
+    
+  
 .headline--m
   text-transform uppercase
   font-weight 100

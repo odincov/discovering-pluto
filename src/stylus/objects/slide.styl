@@ -1,26 +1,46 @@
 .slide
   position relative
-  min-height 100%
   overflow hidden
-
-
-.slide--1905
-  background black
-.slide--2006-b
-  background black
-.slide--1915
-  background url('../images/1915-background.jpg')
-
+  +media-query( $screen, $bp--tablet )
+    min-height 100%
 
 .slide__content 
   position relative
+  text-align left
   z-index 100
-  margin-left 10%
-  margin-top 10%
-  width 35%
+  padding 1em
+  +media-query( $screen, $bp--tablet )
+    margin-left 5%
+    width 50%
+  +media-query( $screen, $bp--desktop )
+    width 40%
 
+.slide__content
+  h2, p
+    color $color--black
+
+
+
++media-query( $screen, $bp--tablet )
+  .slide--1905
+    background black
+    h2, p 
+      color white
+    p.date 
+      display none
+  .slide--2006-b
+    h2, p
+      color white
+    background black
+  .slide--1915
+    background url('../images/1915-background.jpg')
+    h2, p
+      color white
 
 .slide__bg
+  display none
+  +media-query( $screen, $bp--tablet )
+    display block
   position absolute
   left 0
   top 0
