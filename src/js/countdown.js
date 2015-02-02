@@ -13,7 +13,7 @@ function getCountdownTime(){
     , currentLocalOffset = currentDate.getTimezoneOffset()*60000
     , currentUTC = currentLocalTime + currentLocalOffset
 
-  var targetUTC = Date.UTC(2015, 07, 14, 11, 49, 59)
+  var targetUTC = Date.UTC(2015, 06, 14, 11, 49, 59)
 
   var diff = (targetUTC - currentUTC)/1000
   
