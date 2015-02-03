@@ -17,6 +17,8 @@
     width 40%
   h2, p
     color $color--black
+
+.slide__video--1990,
 .slide__image
   float left
   width 100%
@@ -25,7 +27,7 @@
   +media-query( $screen, $bp--desktop )
     width 55%
 
-
+.slide--1990,
 .slide--1978
   +media-query( $screen, $bp--tablet )
     background black
@@ -78,3 +80,11 @@
   background-repeat no-repeat
   background-position center
   background-color black
+.slide__video--1990
+  video
+    height auto
+    width 100%
+    +media-query( $screen, $bp--tablet )
+      max-width 400px
+    +media-query( $screen, $bp--desktop )
+      max-width 500px

@@ -1,5 +1,10 @@
-section.slide
-  .slide__content
-    h2= slides['1990']['title']
-    p.date= slides['1990']['date']
-    p= slides['1990']['content'][0]
+section.slide.slide--1990.u-centering-wrapper
+  .u-centered
+    .slide__content
+      h2.headline.headline--slide= slides['1990']['title']
+      p.date= slides['1990']['date']
+      p= slides['1990']['content'][0]
+    .slide__video--1990
+      video(autoplay loop)
+        source(src='videos/1990-pluto-and-charon-map-video.mp4' type='video/mp4')
+        Your browser does not support the video tag.

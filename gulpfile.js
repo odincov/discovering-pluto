@@ -41,6 +41,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist/images/'))
 })
 
+gulp.task('videos', function() {
+  return gulp.src('./src/videos/*.*')
+    .pipe(gulp.dest('./dist/videos/'))
+})
+
 gulp.task('iconify', function() {
   return iconify({
     src: './src/icons/*.svg',
@@ -74,9 +79,9 @@ gulp.task('browser-sync', function() {
   })
 })
 
-gulp.task('build', ['stylus','jade','js','images'])
+gulp.task('build', ['stylus','jade','js','images','videos'])
 
-gulp.task('go', ['stylus','jade','js','images','browser-sync'], function() {
+gulp.task('go', ['stylus','jade','js','images','videos','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
   gulp.watch('./src/views/**/*.jade', ['jade', reload])
   gulp.watch('./src/js/**/*.js', ['js', reload])
