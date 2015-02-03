@@ -1,5 +1,11 @@
-section.slide
-  .slide__content
-    h2= slides['2006-a']['title']
-    p.date= slides['2006-a']['date']
-    p= slides['2006-a']['content'][0]
+section.slide.slide--2006-a.u-centering-wrapper
+  .slide__video--2006-a
+    .slide__video-pattern
+    video(autoplay loop)
+      source(src='videos/2006-1-new-horizons-launch.mp4' type='video/mp4')
+      Your broser does not support the video tag.
+  .u-centered
+    .slide__content
+      h2.hedline.headline--slide= slides['2006-a']['title']
+      p.date= slides['2006-a']['date']
+      p= slides['2006-a']['content'][0]

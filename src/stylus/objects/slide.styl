@@ -50,7 +50,11 @@
     background url('../images/1915-background.jpg')
     h2, p
       color white
-
+.slide--2006-a
+  +media-query( $screen, $bp--tablet )
+    h2,p
+      color $color--white
+      text-align center
 .slide__bg
   display none
   +media-query( $screen, $bp--tablet )
@@ -88,3 +92,28 @@
       max-width 400px
     +media-query( $screen, $bp--desktop )
       max-width 500px
+
+
+.slide__video--2006-a
+  display none
+  +media-query( $screen, $bp--tablet )
+    display block
+  position absolute
+  size 100% 100%
+  video
+    position absolute
+    bottom 50% 
+    right 50%
+    transform translateX(50%) translateY(50%)
+    min-width 100% 
+    min-height 100% 
+    width auto 
+    height auto
+    z-index -1000 
+    overflow hidden
+.slide__video-pattern
+  position absolute
+  top 0
+  left 0
+  size 100% 100%
+  background url('../images/2006-a-screen-interlace.png')
