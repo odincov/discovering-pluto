@@ -1,4 +1,7 @@
-section.slide
-  .slide__content
-    h2= slides['1986']['title']
-    p.date= slides['1986']['date']
+section.slide.slide--1986.u-centering-wrapper
+  .u-centered
+    .slide__content.slide__content--inverted
+      h2.headline.headline--slide= slides['1986']['title']
+      p.date= slides['1986']['date']
+      p= slides['1986']['content'][0]
+      p= slides['1986']['content'][1]
