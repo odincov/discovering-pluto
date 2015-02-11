@@ -1,0 +1,229 @@
+$year-in-second = 0.5
+
+revolution($pl-year-in-days)
+  return ($pl-year-in-days * $year-in-second / 365.2563)s
+alphaRandom()
+  return random(1000)*.001
+random($n)
+  return math(math(0, 'random') * $n + 1, 'floor')
+stars($s, $max-area, $min-area = 0, $star-size = 0)
+  $stars = ()
+  for $i in (1..(($s)-1))
+    $alphaRandom = alphaRandom()
+    $hShadow = $min-area + random($max-area)
+    $vShadow = $min-area + random($max-area)
+    $spread = $star-size
+    push($stars, ''+$hShadow+'px '+$vShadow+'px 0px '+$spread+'px rgba(255, 255, 255, '+$alphaRandom+')')
+  $string = join(',',$stars)
+  return unquote($string)
+
+
+  // $stars = ($min-area + random($max-area))px ($min-area + random($max-area))px 0 ($star-size)px rgba(255, 255, 255, alphaRandom())
+  // for $i in (1)..(($s) - 1)
+    // $stars = "$stars, ($min-area + random($max-area))px ($min-area + random($max-area))px 0 ($star-size)px rgba(255,255,255, alphaRandom())"
+  // return unquote($stars)
+
+
+
+$sun = 40px
+$mercury-orb = 70px
+$mercury-pl = 4px
+$venus-orb = 100px
+$venus-pl = 8px
+$earth-orb = 145px
+$earth-pl = 6px
+$mars-orb = 190px
+$mars-pl = 6px
+$jupiter-orb = 340px
+$jupiter-pl = 18px
+$saturn-orb = 440px
+$saturn-pl = 12px
+$uranus-orb = 520px
+$uranus-pl = 10px
+$neptune-orb = 630px
+$neptune-pl = 10px
+$pluto-orb = 780px
+$pluto-pl = 3px
+
+$asteroids-belt-orb = 300px
+$asteroids-belt-pl = 210px
+
+@keyframes orb
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(-360deg)
+
+.solar-system
+  &:after
+    content ""
+    position absolute
+    size 2px 2px
+    top -2px
+    background white
+    box-shadow stars(500, 1800);
+    border-radius 100px
+  margin 0 auto
+  size 100% 100%
+  position relative
+  div 
+    border-radius 1000px
+    top 50%
+    left 50%
+    position absolute
+    z-index 999
+    &:not(.sun)
+      border 1px solid rgba(102, 166, 229, 0.12)
+      &:before
+        left 50%
+        border-radius 100px
+        content ""
+        position absolute
+    &:not(.asteroids-belt)
+      &:before
+        box-shadow inset 0 6px 0 -2px rgba(0, 0, 0, 0.25)
+
+.solar-system__sun
+  background-image radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%)
+  size $sun $sun
+  margin-top ($sun / -2)
+  margin-left ($sun / -2)
+  background-clip padding-box
+  border 0 !important
+  background-position -28px -103px
+  background-size 175%
+  box-shadow 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13)
+.solar-system__mercury
+  size $mercury-orb $mercury-orb
+  margin-top ($mercury-orb / -2)
+  margin-left ($mercury-orb / -2)
+  animation orb revolution(87.5) linear infinite
+  &:before
+    size $mercury-pl $mercury-pl
+    background #9f5e26
+    margin-top ($mercury-pl / -2)
+    margin-left ($mercury-pl / -2)
+.solar-system__venus
+  size $venus-orb $venus-orb
+  margin-top ($venus-orb / -2)
+  margin-left ($venus-orb / -2)
+  animation orb revolution(224.7) linear infinite
+  &:before
+    size $venus-pl $venus-pl
+    background #BEB768
+    margin-top ($venus-pl / -2)
+    margin-left ($venus-pl / -2)
+.solar-system__earth
+  size $earth-orb $earth-orb
+  margin-top ($earth-orb / -2)
+  margin-left ($earth-orb / -2)
+  animation orb revolution(365.2563) linear infinite
+  &:before
+    size $earth-pl $earth-pl
+    background #11abe9
+    margin-top ($earth-pl / -2)
+    margin-left ($earth-pl / -2)
+  &:after
+    position absolute
+    content ""
+    size 18px 18px
+    left 50%
+    top 0px
+    margin-left -9px
+    margin-top -9px
+    border-radius 100px
+    box-shadow 0 -10px 0 -8px grey
+    animation orb revolution(27.3216) linear infinite
+.solar-system__mars
+  height $mars-orb
+  width $mars-orb
+  margin-top ($mars-orb / -2)
+  margin-left ($mars-orb / -2)
+  animation orb revolution(687) linear infinite
+  &:before
+    size $mars-pl $mars-pl
+    background #cf3921
+    margin-top ($mars-pl / -2)
+    margin-left ($mars-pl / -2)
+.solar-system__jupiter
+  size $jupiter-orb $jupiter-orb
+  margin-top ($jupiter-orb / -2)
+  margin-left ($jupiter-orb / -2)
+  animation orb revolution(4331) linear infinite
+  &:before
+    size $jupiter-pl
+    background #c76e2a
+    margin-top ($jupiter-pl / -2)
+    margin-left ($jupiter-pl / -2)
+.solar-system__saturn
+  size $saturn-orb $saturn-orb
+  margin-top ($saturn-orb / -2)
+  margin-left ($saturn-orb / -2)
+  animation orb revolution(10747) linear infinite
+  &:before
+    size $saturn-pl $saturn-pl
+    background #e7c194
+    margin-top ($saturn-pl / -2)
+    margin-left ($saturn-pl / -2)
+  &:after
+    position absolute
+    content ""
+    height 2.34% 
+    width 4.676%
+    left 50%
+    top 0px
+    transform rotateZ(-52deg)
+    margin-left -2.3%
+    margin-top -1.2%
+    border-radius 50% 50% 50% 50%
+    box-shadow 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641
+    animation orb revolution(10747) linear infinite
+    animation-direction reverse // compensate to reverse main orbit animation
+    transform-origin 52% 60%
+.solar-system__uranus
+  size $uranus-orb $uranus-orb
+  margin-top ($uranus-orb / -2)
+  margin-left ($uranus-orb / -2)
+  animation orb revolution(30589) linear infinite
+  &:before
+    height $uranus-pl
+    width $uranus-pl
+    background #b5e3e3
+    margin-top ($uranus-pl / -2)
+    margin-left ($uranus-pl / -2)
+.solar-system__neptune
+  size $neptune-orb $neptune-orb
+  margin-top ($neptune-orb / -2)
+  margin-left ($neptune-orb / -2)
+  animation orb revolution(59802) linear infinite
+  &:before
+    size $neptune-pl $neptune-pl
+    background #175e9e
+    margin-top ($neptune-pl / -2)
+    margin-left ($neptune-pl / -2)
+.solar-system__asteroids-belt
+  opacity .7
+  border-color transparent !important
+  size $asteroids-belt-orb $asteroids-belt-orb
+  margin-top ($asteroids-belt-orb / -2)
+  margin-left ($asteroids-belt-orb / -2)
+  animation orb revolution(2191) linear infinite
+  overflow hidden
+  &:before
+    top 50%
+    size $asteroids-belt-pl $asteroids-belt-pl
+    margin-left ($asteroids-belt-pl / -2)
+    margin-top ($asteroids-belt-pl / -2)
+    background transparent
+    border-radius 140px !important
+    box-shadow stars(390, 290, -290/2, -104)
+.solar-system__pluto
+  size $pluto-orb $pluto-orb
+  margin-top ($pluto-orb / -2 + -60)
+  margin-left ($pluto-orb / -2 + 70)
+  animation orb revolution(90580) linear infinite
+  &:before
+    size $pluto-pl $pluto-pl
+    background #fff
+    margin-top ($pluto-pl / -2)
+    margin-left ($pluto-pl / -2)
