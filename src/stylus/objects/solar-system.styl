@@ -60,6 +60,7 @@ $asteroids-belt-pl = 210px
     position absolute
     size 2px 2px
     top -2px
+    left -2px
     background white
     box-shadow stars(500, 1800);
     border-radius 100px
@@ -72,14 +73,14 @@ $asteroids-belt-pl = 210px
     left 50%
     position absolute
     z-index 999
-    &:not(.sun)
+    &:not(.solar-system__sun)
       border 1px solid rgba(102, 166, 229, 0.12)
       &:before
         left 50%
         border-radius 100px
         content ""
         position absolute
-    &:not(.asteroids-belt)
+    &:not(.solar-system__asteroids-belt)
       &:before
         box-shadow inset 0 6px 0 -2px rgba(0, 0, 0, 0.25)
 
@@ -203,7 +204,7 @@ $asteroids-belt-pl = 210px
     margin-left ($neptune-pl / -2)
 .solar-system__asteroids-belt
   opacity .7
-  border-color transparent !important
+  // border-color transparent !important
   size $asteroids-belt-orb $asteroids-belt-orb
   margin-top ($asteroids-belt-orb / -2)
   margin-left ($asteroids-belt-orb / -2)
@@ -216,7 +217,7 @@ $asteroids-belt-pl = 210px
     margin-top ($asteroids-belt-pl / -2)
     background transparent
     border-radius 140px !important
-    box-shadow stars(390, 290, -290/2, -104)
+    box-shadow stars(390, 290, (290/-2), (104*-1))
 .solar-system__pluto
   size $pluto-orb $pluto-orb
   margin-top ($pluto-orb / -2 + -60)
