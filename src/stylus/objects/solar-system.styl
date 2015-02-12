@@ -18,13 +18,6 @@ stars($s, $max-area, $min-area = 0, $star-size = 0)
   return unquote($string)
 
 
-  // $stars = ($min-area + random($max-area))px ($min-area + random($max-area))px 0 ($star-size)px rgba(255, 255, 255, alphaRandom())
-  // for $i in (1)..(($s) - 1)
-    // $stars = "$stars, ($min-area + random($max-area))px ($min-area + random($max-area))px 0 ($star-size)px rgba(255,255,255, alphaRandom())"
-  // return unquote($stars)
-
-
-
 $sun = 40px
 $mercury-orb = 270px
 $mercury-pl = 4px
@@ -43,7 +36,7 @@ $uranus-pl = 10px
 $neptune-orb = 830px
 $neptune-pl = 10px
 $pluto-orb = 980px
-$pluto-pl = 3px
+$pluto-pl = 8px
 
 $asteroids-belt-orb = 300px
 $asteroids-belt-pl = 210px
@@ -55,16 +48,17 @@ $asteroids-belt-pl = 210px
     transform rotate(-360deg)
 
 .solar-system
-  &:after
-    content ""
-    position absolute
-    size 2px 2px
-    top -2px
-    left -2px
-    background white
-    box-shadow stars(500, 1800);
-    border-radius 100px
+  // &:after
+  //   content ""
+  //   position absolute
+  //   size 2px 2px
+  //   top -2px
+  //   left -2px
+  //   background white
+  //   box-shadow stars(500, 1800);
+  //   border-radius 100px
   margin 0 auto
+  z-index 10
   size 100% 100%
   position relative
   div 
@@ -85,8 +79,19 @@ $asteroids-belt-pl = 210px
       &:before
         box-shadow inset 0 6px 0 -2px rgba(0, 0, 0, 0.25)
 
+$rays = ()
+push($rays, '0 0 0 13px rgba(255, 222, 0, 0.03)')
+push($rays, '0 0 0 30px rgba(255, 222, 0, 0.03)')
+push($rays, '0 0 0 50px rgba(255, 180, 0, 0.02)')
+push($rays, '0 0 0 70px rgba(255, 180, 0, 0.02)')
+push($rays, '0 0 0 90px rgba(255, 180, 0, 0.02)')
+push($rays, '0 0 0 150px rgba(255, 144, 0, 0.01)')
+push($rays, '0 0 0 300px rgba(255, 144, 0, 0.01)')
+push($rays, '0 0 0 400px rgba(255, 144, 0, 0.01)')
+$sunrays = join(',',$rays)
+
 .solar-system__sun
-  background-image radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%)
+  background-image radial-gradient(ellipse at center, #ffd700 1%, #ffd700 50%, #ffbb00 100%)
   size $sun $sun
   margin-top ($sun / -2)
   margin-left ($sun / -2)
@@ -94,7 +99,7 @@ $asteroids-belt-pl = 210px
   border 0 !important
   background-position -28px -103px
   background-size 175%
-  box-shadow 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13)
+  box-shadow unquote($sunrays)
 .solar-system__mercury
   size $mercury-orb $mercury-orb
   margin-top ($mercury-orb / -2)
@@ -250,8 +255,8 @@ $asteroids-belt-pl = 210px
 .solar-system__pluto
   border-color transparent !important
   size $pluto-orb $pluto-orb
-  margin-top ($pluto-orb / -2 - 60)
-  margin-left ($pluto-orb / -2 + 70)
+  margin-top ($pluto-orb / -2)
+  margin-left ($pluto-orb / -2 + 85)
   animation orb revolution(90580) linear infinite
   &:before
     size $pluto-pl $pluto-pl
@@ -260,6 +265,6 @@ $asteroids-belt-pl = 210px
     margin-left ($pluto-pl / -2)
 .solar-system__pluto--super-orb
   size $pluto-orb $pluto-orb
-  margin-top ($pluto-orb / -2 - 60)
-  margin-left ($pluto-orb / -2 + 70)
+  margin-top ($pluto-orb / -2 )
+  margin-left ($pluto-orb / -2 + 85)
   border dashed 1px #3a4b55 !important
