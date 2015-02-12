@@ -26,23 +26,23 @@ stars($s, $max-area, $min-area = 0, $star-size = 0)
 
 
 $sun = 40px
-$mercury-orb = 70px
+$mercury-orb = 270px
 $mercury-pl = 4px
-$venus-orb = 100px
+$venus-orb = 300px
 $venus-pl = 8px
-$earth-orb = 145px
+$earth-orb = 345px
 $earth-pl = 6px
-$mars-orb = 190px
+$mars-orb = 390px
 $mars-pl = 6px
-$jupiter-orb = 340px
+$jupiter-orb = 540px
 $jupiter-pl = 18px
-$saturn-orb = 440px
+$saturn-orb = 640px
 $saturn-pl = 12px
-$uranus-orb = 520px
+$uranus-orb = 720px
 $uranus-pl = 10px
-$neptune-orb = 630px
+$neptune-orb = 830px
 $neptune-pl = 10px
-$pluto-orb = 780px
+$pluto-orb = 980px
 $pluto-pl = 3px
 
 $asteroids-belt-orb = 300px
@@ -99,53 +99,53 @@ $asteroids-belt-pl = 210px
   margin-top ($mercury-orb / -2)
   margin-left ($mercury-orb / -2)
   animation orb revolution(87.5) linear infinite
-  &:before
-    size $mercury-pl $mercury-pl
-    background #9f5e26
-    margin-top ($mercury-pl / -2)
-    margin-left ($mercury-pl / -2)
+  // &:before
+  //   size $mercury-pl $mercury-pl
+  //   background #9f5e26
+  //   margin-top ($mercury-pl / -2)
+  //   margin-left ($mercury-pl / -2)
 .solar-system__venus
   size $venus-orb $venus-orb
   margin-top ($venus-orb / -2)
   margin-left ($venus-orb / -2)
   animation orb revolution(224.7) linear infinite
-  &:before
-    size $venus-pl $venus-pl
-    background #BEB768
-    margin-top ($venus-pl / -2)
-    margin-left ($venus-pl / -2)
+  // &:before
+  //   size $venus-pl $venus-pl
+  //   background #BEB768
+  //   margin-top ($venus-pl / -2)
+  //   margin-left ($venus-pl / -2)
 .solar-system__earth
   size $earth-orb $earth-orb
   margin-top ($earth-orb / -2)
   margin-left ($earth-orb / -2)
   animation orb revolution(365.2563) linear infinite
-  &:before
-    size $earth-pl $earth-pl
-    background #11abe9
-    margin-top ($earth-pl / -2)
-    margin-left ($earth-pl / -2)
-  &:after
-    position absolute
-    content ""
-    size 18px 18px
-    left 50%
-    top 0px
-    margin-left -9px
-    margin-top -9px
-    border-radius 100px
-    box-shadow 0 -10px 0 -8px grey
-    animation orb revolution(27.3216) linear infinite
+  // &:before
+  //   size $earth-pl $earth-pl
+  //   background #11abe9
+  //   margin-top ($earth-pl / -2)
+  //   margin-left ($earth-pl / -2)
+  // &:after
+  //   position absolute
+  //   content ""
+  //   size 18px 18px
+  //   left 50%
+  //   top 0px
+  //   margin-left -9px
+  //   margin-top -9px
+  //   border-radius 100px
+  //   box-shadow 0 -10px 0 -8px grey
+  //   animation orb revolution(27.3216) linear infinite
 .solar-system__mars
   height $mars-orb
   width $mars-orb
   margin-top ($mars-orb / -2)
   margin-left ($mars-orb / -2)
   animation orb revolution(687) linear infinite
-  &:before
-    size $mars-pl $mars-pl
-    background #cf3921
-    margin-top ($mars-pl / -2)
-    margin-left ($mars-pl / -2)
+  // &:before
+  //   size $mars-pl $mars-pl
+  //   background #cf3921
+  //   margin-top ($mars-pl / -2)
+  //   margin-left ($mars-pl / -2)
 .solar-system__jupiter
   size $jupiter-orb $jupiter-orb
   margin-top ($jupiter-orb / -2)
