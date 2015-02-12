@@ -147,6 +147,7 @@ $asteroids-belt-pl = 210px
   //   margin-top ($mars-pl / -2)
   //   margin-left ($mars-pl / -2)
 .solar-system__jupiter
+  border-color transparent !important
   size $jupiter-orb $jupiter-orb
   margin-top ($jupiter-orb / -2)
   margin-left ($jupiter-orb / -2)
@@ -156,7 +157,13 @@ $asteroids-belt-pl = 210px
     background #c76e2a
     margin-top ($jupiter-pl / -2)
     margin-left ($jupiter-pl / -2)
+.solar-system__jupiter--super-orb
+  size $jupiter-orb $jupiter-orb
+  margin-top ($jupiter-orb / -2)
+  margin-left ($jupiter-orb / -2)
+  border dashed 1px #1b2732 !important
 .solar-system__saturn
+  border-color transparent !important
   size $saturn-orb $saturn-orb
   margin-top ($saturn-orb / -2)
   margin-left ($saturn-orb / -2)
@@ -181,7 +188,13 @@ $asteroids-belt-pl = 210px
     animation orb revolution(10747) linear infinite
     animation-direction reverse // compensate to reverse main orbit animation
     transform-origin 52% 60%
+.solar-system__saturn--super-orb
+  size $saturn-orb $saturn-orb
+  margin-top ($saturn-orb / -2)
+  margin-left ($saturn-orb / -2)
+  border dashed 1px #1b2732 !important
 .solar-system__uranus
+  border-color transparent !important
   size $uranus-orb $uranus-orb
   margin-top ($uranus-orb / -2)
   margin-left ($uranus-orb / -2)
@@ -192,7 +205,13 @@ $asteroids-belt-pl = 210px
     background #b5e3e3
     margin-top ($uranus-pl / -2)
     margin-left ($uranus-pl / -2)
+.solar-system__uranus--super-orb
+  size $uranus-orb $uranus-orb
+  margin-top ($uranus-orb / -2)
+  margin-left ($uranus-orb / -2)
+  border dashed 1px #1b2732 !important
 .solar-system__neptune
+  border-color transparent !important
   size $neptune-orb $neptune-orb
   margin-top ($neptune-orb / -2)
   margin-left ($neptune-orb / -2)
@@ -202,6 +221,11 @@ $asteroids-belt-pl = 210px
     background #175e9e
     margin-top ($neptune-pl / -2)
     margin-left ($neptune-pl / -2)
+.solar-system__neptune--super-orb
+  size $neptune-orb $neptune-orb
+  margin-top ($neptune-orb / -2)
+  margin-left ($neptune-orb / -2)
+  border dashed 1px #1b2732 !important
 .solar-system__asteroids-belt
   opacity .7
   // border-color transparent !important
@@ -219,8 +243,9 @@ $asteroids-belt-pl = 210px
     border-radius 140px !important
     box-shadow stars(390, 290, (290/-2), (104*-1))
 .solar-system__pluto
+  border-color transparent !important
   size $pluto-orb $pluto-orb
-  margin-top ($pluto-orb / -2 + -60)
+  margin-top ($pluto-orb / -2 - 60)
   margin-left ($pluto-orb / -2 + 70)
   animation orb revolution(90580) linear infinite
   &:before
@@ -228,3 +253,8 @@ $asteroids-belt-pl = 210px
     background #fff
     margin-top ($pluto-pl / -2)
     margin-left ($pluto-pl / -2)
+.solar-system__pluto--super-orb
+  size $pluto-orb $pluto-orb
+  margin-top ($pluto-orb / -2 - 60)
+  margin-left ($pluto-orb / -2 + 70)
+  border dashed 1px #3a4b55 !important
