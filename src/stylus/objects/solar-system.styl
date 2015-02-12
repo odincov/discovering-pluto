@@ -74,7 +74,8 @@ $asteroids-belt-pl = 210px
     position absolute
     z-index 999
     &:not(.solar-system__sun)
-      border 1px solid rgba(102, 166, 229, 0.12)
+      // border 1px solid rgba(102, 166, 229, 0.12)
+      border 1px dashed #1b2732
       &:before
         left 50%
         border-radius 100px
@@ -98,7 +99,8 @@ $asteroids-belt-pl = 210px
   size $mercury-orb $mercury-orb
   margin-top ($mercury-orb / -2)
   margin-left ($mercury-orb / -2)
-  animation orb revolution(87.5) linear infinite
+  opacity .5
+  // animation orb revolution(87.5) linear infinite
   // &:before
   //   size $mercury-pl $mercury-pl
   //   background #9f5e26
@@ -108,7 +110,8 @@ $asteroids-belt-pl = 210px
   size $venus-orb $venus-orb
   margin-top ($venus-orb / -2)
   margin-left ($venus-orb / -2)
-  animation orb revolution(224.7) linear infinite
+  opacity .5
+  // animation orb revolution(224.7) linear infinite
   // &:before
   //   size $venus-pl $venus-pl
   //   background #BEB768
@@ -118,7 +121,8 @@ $asteroids-belt-pl = 210px
   size $earth-orb $earth-orb
   margin-top ($earth-orb / -2)
   margin-left ($earth-orb / -2)
-  animation orb revolution(365.2563) linear infinite
+  opacity .5
+  // animation orb revolution(365.2563) linear infinite
   // &:before
   //   size $earth-pl $earth-pl
   //   background #11abe9
@@ -140,7 +144,8 @@ $asteroids-belt-pl = 210px
   width $mars-orb
   margin-top ($mars-orb / -2)
   margin-left ($mars-orb / -2)
-  animation orb revolution(687) linear infinite
+  opacity .5
+  // animation orb revolution(687) linear infinite
   // &:before
   //   size $mars-pl $mars-pl
   //   background #cf3921
