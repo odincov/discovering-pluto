@@ -30,15 +30,15 @@ $earth-orb = 345px
 $earth-pl = 6px
 $mars-orb = 390px
 $mars-pl = 6px
-$jupiter-orb = 540px
+$jupiter-orb = 240px
 $jupiter-pl = 18px
-$saturn-orb = 640px
+$saturn-orb = 340px
 $saturn-pl = 12px
-$uranus-orb = 720px
+$uranus-orb = 480px
 $uranus-pl = 10px
-$neptune-orb = 830px
+$neptune-orb = 630px
 $neptune-pl = 10px
-$pluto-orb = 980px
+$pluto-orb = 700px
 $pluto-pl = 8px
 
 $asteroids-belt-orb = 300px
@@ -259,7 +259,7 @@ $sunrays = join(',',$rays)
   border-color transparent !important
   size $pluto-orb $pluto-orb
   margin-top ($pluto-orb / -2)
-  margin-left ($pluto-orb / -2 + 85)
+  margin-left ($pluto-orb / -2 + 45)
   animation orb revolution(90580) linear infinite
   &:before
     size $pluto-pl $pluto-pl
@@ -269,5 +269,5 @@ $sunrays = join(',',$rays)
 .solar-system__pluto--super-orb
   size $pluto-orb $pluto-orb
   margin-top ($pluto-orb / -2 )
-  margin-left ($pluto-orb / -2 + 85)
+  margin-left ($pluto-orb / -2 + 45)
   border dashed 1px #3a4b55 !important
