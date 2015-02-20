@@ -1,5 +1,3 @@
-var internals = {}
-
 function calcage(secs, num1, num2, leadingZero) {
   var s = ((Math.floor(secs/num1))%num2).toString();
   if (leadingZero && s.length < 2)
@@ -8,17 +6,9 @@ function calcage(secs, num1, num2, leadingZero) {
 }
 
 function getCountdownTime(){
-//   var currentDate = new Date()
-//       , currentLocalTime = currentDate.getTime()
-//       , currentLocalOffset = currentDate.getTimezoneOffset()*60000
-//       , currentUTC = currentLocalTime + currentLocalOffset
-
   var currentUTC = new Date().getTime()
-
   var targetUTC = Date.UTC(2015, 06, 14, 11, 49, 59)
-
   var diff = (targetUTC - currentUTC)/1000
-  
   var days = calcage(diff,86400,100000)
   var hours = calcage(diff,3600,24, true)
   var minutes = calcage(diff,60,60, true)
@@ -39,7 +29,7 @@ function renderCountdown(elements,c){
   elements.seconds.empty().html(c.seconds)
 }
 
-internals.init = function(app){
+function init(){
   var elements = {
     days : $('.timer__number--days'),
     hours: $('.timer__number--hours'),
@@ -51,4 +41,4 @@ internals.init = function(app){
   },1000)
 }
 
-module.exports = internals.init
+module.exports = init

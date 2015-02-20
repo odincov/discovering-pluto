@@ -21,15 +21,21 @@
         li
           span.timer__number.timer__number--seconds
           span.timer__title= subscribeView['counter']['seconds']
-        
-
     p.subscribe__date= subscribeView['content']
     hr
-    p.subscribe__text= subscribeView['invitation']
-    form
-      .subscribe__form-group
-        input.subscribe__input(type='text', placeholder= subscribeView['email'])
-        button.subscribe__button= subscribeView['send']
-      label.subscribe__checkbox
-        input(type='checkbox')
-        span= subscribeView['sign-up-for-news']
+    .subscribe__form-wrapper
+      p.subscribe__text= subscribeView['invitation']
+      form
+        .subscribe__form-group
+          input#subscribe_email.subscribe__input(type='text', placeholder= subscribeView['email'])
+          button#subscribe_button.subscribe__button= subscribeView['send']
+        label.subscribe__checkbox
+          input#subscribe_for_news(type='checkbox')
+          span= subscribeView['sign-up-for-news']
+      p.subscribe__error.subscribe__error--email= subscribeView['error']
+      p.subscribe__error.subscribe__error--email-exists= subscribeView['error-email-exists']
+      p.subscribe__error.subscribe__error--other= subscribeView['error-other']
+    .subscribe__thank-you-wrapper
+      h4.headline.headline--m= subscribeView['thanks-title']
+      p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][0]
+      p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][1]

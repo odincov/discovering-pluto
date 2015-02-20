@@ -76,3 +76,23 @@
   font-size $milli-size
   color $color--pale-white--dark
   padding-left .5em
+.subscribe__thank-you-wrapper
+  display none
+  margin 0 auto
+  +media-query( $screen, $bp--tablet )
+    width 550px
+  +media-query( $screen, $bp--desktop )
+    width 650px
+.subscribe__thank-you-msg
+  font-size $zeta-size
+  color $color--pale-white--dark
+  +media-query( $screen, $bp--desktop )
+    font-size $epsilon-size
+  a
+    color #0c73cb
+    text-decoration none
+.subscribe__error
+  display none
+  color #F74242
+  font-weight bold
+  font-size $milli-size
