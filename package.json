@@ -28,6 +28,10 @@
     "async": "^0.9.0",
     "superagent": "^0.21.0",
     "debug": "^2.1.1",
-    "validate": "^2.1.6"
+    "validate": "^2.1.6",
+    "gulp-util": "^3.0.4",
+    "gulp-ftp": "^1.0.3",
+    "gulp-minify-css": "^0.4.6",
+    "gulp-sourcemaps": "^1.5.0"
   }
 }

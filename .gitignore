@@ -34,3 +34,6 @@ dist
 
 # bower vendor files
 src/vendor
+
+# ftp details
+ftp-config.js
