@@ -12,7 +12,9 @@ var gulp = require('gulp')
   , iconify = require('gulp-iconify')
   , gutil = require('gulp-util')
   , minifyCSS = require('gulp-minify-css')
+  , ftp = require('gulp-ftp')
   , defaultLang = 'ru'
+  , ftpConfig = require('./ftp-config')
 
 gulp.task('stylus', function () {
   var lang = gutil.env.lang || defaultLang
@@ -93,6 +95,13 @@ gulp.task('browser-sync', function() {
   })
 })
 
+gulp.task('upload', function () {
+  var lang = gutil.env.lang || defaultLang
+  return gulp.src('./dist/'+lang+'/**/*')
+    .pipe(ftp(ftpConfig[lang]))
+    .pipe(gutil.noop())
+})
+
 gulp.task('build', ['stylus','jade','js','iconify','images','videos'])
 
 gulp.task('go', ['build','browser-sync'], function() {
@@ -100,3 +109,5 @@ gulp.task('go', ['build','browser-sync'], function() {
   gulp.watch('./src/views/**/*.jade', ['jade', reload])
   gulp.watch('./src/js/**/*.js', ['js', reload])
 })
+
+gulp.task('deploy', ['build','upload'])

@@ -21,7 +21,8 @@
   float right
   margin-right 5%
 .slide__video--1990,
-.slide__image
+.slide__image,
+.slide__info-graphics
   float left
   width 100%
   +media-query( $screen, $bp--tablet )
@@ -78,13 +79,19 @@
     color $color--pale-white
 .slide--1979
   background #01060d
-.slide--1986,
 .slide--1988-b
   background $color--deep-blue
   h2
     color white
   p
     color $color--pale-white
+.slide--1986
+  background #00031b
+  h2
+    color white
+  p
+    color $color--pale-white
+
 // backgrounds
 
 .slide__bg
@@ -107,7 +114,10 @@
   background-image url('../images/1915-calculations.png')
 .slide__bg--2006-b
   background-image url('../images/2006-b.jpg')
-
+.slide__bg--1986
+  background-image url('../images/1986-blue-glow.png')
+.slide__bg--stars
+  background-image url('../images/stars.png')
 
 
 .slide__image--1978
@@ -159,3 +169,8 @@
   left 0
   size 100% 100%
   background url('../images/2006-a-screen-interlace.png')
+
+
+.slide__info-graphics--1986
+  position relative
+  z-index 10000

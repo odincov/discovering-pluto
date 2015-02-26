@@ -1,0 +1,69 @@
+.pm-ratio
+  position relative
+  size 100% 350px
+  // border solid 1px red
+  float left
+  padding 0 .5em
+  +media-query( $screen, $bp--mobile--landscape )
+    size 100% 450px
+  +media-query( $screen, $bp--tablet )
+    absolute 50% 50%
+    size 300px 220px
+    margin-top -150px
+    margin-left -400px
+  +media-query( $screen, $bp--desktop )
+    size 500px 360px
+    margin-top -150px
+    margin-left -500px
+  +media-query( $screen, $bp--desktop--medium )
+    size 700px 500px
+    margin-top -250px
+    margin-left -700px
+  list-style none
+  z-index 1000
+  li
+    float left
+    padding 0 .5em
+    margin 0
+.pm-ratio__pluto
+  width 40%
+.pm-ratio__moon
+  width 60%
+.pm-ratio__solid
+  float left
+  size 100% 225px
+  +media-query( $screen, $bp--mobile--landscape )
+    size 100% 350px
+  +media-query( $screen, $bp--tablet )
+    size 100% 160px
+  +media-query( $screen, $bp--desktop )
+    size 100% 280px
+  +media-query( $screen, $bp--desktop--medium )
+    size 100% 400px
+  background-position bottom center
+  background-repeat no-repeat
+.pm-ratio__solid--pluto
+  background-image url('../images/1986-pluto--paint-effect.png')
+  background-size 100% auto
+.pm-ratio__solid--moon
+  background-image url('../images/1986-moon--paint-effect.png')
+  background-size 100% auto
+.pm-ratio__numbers
+  float left
+  width 100%
+  text-align center
+  padding-top 2em
+  font-size $zeta-size
+  +media-query( $screen, $bp--desktop )
+    font-size $delta-size
+  font-family $font--main
+  span 
+    padding 2em 0 .5em
+.pm-ratio__numbers--pluto 
+  color #c8af60
+  span
+    border-bottom 10px solid #c8af60
+.pm-ratio__numbers--moon
+  color #acb4b0
+  span
+    border-bottom 10px solid #acb4b0

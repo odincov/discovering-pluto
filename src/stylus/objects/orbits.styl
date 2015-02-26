@@ -1,10 +1,13 @@
 .orbits
-  position absolute
-  size 800px 800px
-  top 50%
-  left 45%
-  margin-top -400px
-  background url('../images/1979-orbits-background.png') no-repeat center
+  display none
+  +media-query( $screen, $bp--tablet )
+    display block
+    position absolute
+    size 800px 800px
+    top 50%
+    left 45%
+    margin-top -400px
+    background url('../images/1979-orbits-background.png') no-repeat center
 .orbits__date
   position absolute
   size 75px 25px
