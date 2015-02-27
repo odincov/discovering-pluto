@@ -1,0 +1,43 @@
+.unstable-orbits
+  size 100% 800px
+  float left
+  margin-top -300px
+  +media-query( $screen, $bp--tablet )
+    absolute 50% 50%
+    size 828px 1087px
+    margin-top -544px
+  background-image url('../images/1988-b-ellipses.png')
+  z-index 1000
+
+$uoSun = 70px
+
+$uorays = ()
+push($uorays, '0 0 0 20px rgba(255, 222, 0, 0.03)')
+push($uorays, '0 0 0 44px rgba(255, 222, 0, 0.03)')
+push($uorays, '0 0 0 70px rgba(255, 180, 0, 0.02)')
+push($uorays, '0 0 0 100px rgba(255, 180, 0, 0.02)')
+push($uorays, '0 0 0 140px rgba(255, 180, 0, 0.02)')
+push($uorays, '0 0 0 200px rgba(255, 144, 0, 0.02)')
+push($uorays, '0 0 0 300px rgba(255, 144, 0, 0.03)')
+push($uorays, '0 0 0 500px rgba(255, 144, 0, 0.025)')
+$uosunrays = join(',',$uorays)
+
+
+.unstable-orbits__sun
+  display none
+  +media-query( $screen, $bp--tablet )
+    display block
+  border-radius 1000px
+  top 50%
+  left 700px
+  position absolute
+  z-index 999
+  background-image radial-gradient(ellipse at center, #ffd700 1%, #ffd700 50%, #ffbb00 100%)
+  size $uoSun $uoSun
+  margin-top ($uoSun / -2)
+  margin-left ($uoSun / -2)
+  background-clip padding-box
+  border 0 !important
+  background-position -28px -103px
+  background-size 175%
+  box-shadow unquote($uosunrays)

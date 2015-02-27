@@ -20,6 +20,13 @@
 .slide__content--inverted
   float right
   margin-right 5%
+.slide__content--center
+  float none
+  margin-left auto
+  margin-right auto
+  +media-query( $screen, $bp--tablet )
+    padding 0
+    text-align center
 .slide__video--1990,
 .slide__image,
 .slide__info-graphics
@@ -44,10 +51,9 @@
     background-size 500px auto
     padding-bottom 0px
 .slide--1990
-  +media-query( $screen, $bp--tablet )
-    background black
-    h2, p 
-      color white
+  background black
+  h2, p 
+    color white
 .slide--1905
   +media-query( $screen, $bp--tablet )
     background black
@@ -91,7 +97,14 @@
     color white
   p
     color $color--pale-white
-
+.slide--1988-a
+  h2 
+    color white
+  p
+    color $color--pale-white
+  padding-bottom 150px
+  +media-query( $screen, $bp--desktop )
+    padding-bottom 0px
 // backgrounds
 
 .slide__bg
@@ -118,7 +131,17 @@
   background-image url('../images/1986-blue-glow.png')
 .slide__bg--stars
   background-image url('../images/stars.png')
-
+.slide__bg--1988-a-stars
+  display block
+  background-image url('../images/1988-a-stars.png')
+.slide__bg--1988-a-atmosphere
+  display block
+  background-image url('../images/1988-a-atmosphere.png')
+  background-position center bottom
+  background-size auto
+.slide__bg--1988-b-bg
+  background-image url('../images/1988-b-bg.png')
+  background-position right center
 
 .slide__image--1978
   size 100% 400px
