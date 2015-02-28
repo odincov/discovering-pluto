@@ -94,11 +94,6 @@ push($rays, '0 0 0 400px rgba(255, 144, 0, 0.01)')
 $sunrays = join(',',$rays)
 
 .solar-system__sun
-  border-radius 1000px
-  top 50%
-  left 50%
-  position absolute
-  z-index 999
   background-image radial-gradient(ellipse at center, #ffd700 1%, #ffd700 50%, #ffbb00 100%)
   size $sun $sun
   margin-top ($sun / -2)

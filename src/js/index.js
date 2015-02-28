@@ -2,6 +2,7 @@ var EventEmitter = require('events').EventEmitter
 var domready = require('domready')
 
 window.myDebug = require('debug')
+
 window.resizeQueue = []
 window.scrollQueue = []
 
@@ -19,6 +20,7 @@ require('./lib/dimensions-controller')(app)
 require('./animations')(app)
 require('./countdown')(app)
 require('./subscribe-form')(app)
+require('./navigation')(app)
 
 domready(function(){
   console.log('hello, pluto!')
