@@ -1,0 +1,52 @@
+.timeline
+  display none
+  +media-query( $screen, $bp--desktop )
+    display block
+  fixed 0 0 0 false
+  size 145px 100%
+  padding 1em
+  z-index 10000
+  font-family $font--headlines
+  opacity 0
+  transition opacity 0.25s
+.timeline__label
+  width 92px
+  padding .5em 0
+  text-align center
+  color #ababaa
+.timeline__label--start
+  absolute 0 0 false false
+.timeline__label--end
+  absolute false 0 0 false
+.timeline__guidline
+  border-left 1px dashed #7e7e7e
+  width 0px
+  absolute 50px 45px 50px false
+.timeline__bull
+  background #7e7e7e
+  size 6px 6px
+  border-radius 3px
+.timeline__bull--top
+  absolute -3px false false -3px
+.timeline__bull--bottom
+  absolute false false -3px -3px
+.timeline__date-wrapper
+  width 110px
+  // border 1px solid green
+  absolute 33px 33px 20px false
+.timeline__date-cursor
+  transition top .5s ease
+  absolute 0 0
+  size 100% 30px
+  // border 1px solid yellow
+.timeline__super-bull
+  absolute 10px 7px false false
+  size 10px 10px
+  background-color #ababaa
+  box-shadow 0 0 0 10px rgba(171, 171, 170, 0.2)
+  border-radius 100px
+.timeline__date
+  color #ababaa
+  line-height .85em
+  font-size $alpha-size
+  font-family $font--headlines--condenced

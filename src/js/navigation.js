@@ -52,6 +52,36 @@ function adjustOffsetPosition () {
   })
 }
 
+function adjustTimeline () {
+  var $timeline = $('.timeline')
+  var $cursor = $('.timeline__date-cursor')
+  var $blocks = $('.js-nav-block')
+  var $slides = $('section.slide')
+  var $active = $('.js-nav-block-active')
+  var $date = $('.timeline__date')
+
+  var l = $slides.length
+  var p = $slides.index($active)
+  var t = p/l*100
+  var cbi = $blocks.index($active)
+
+  if( t < 0 ) {
+    $timeline.css({ 'opacity': '0' })
+    t = (cbi === 0) ? 0 : 100
+  }
+  else {
+    setTimeout(function () {
+      $timeline.css('opacity','1')
+    }, 500)
+  }
+
+  $cursor.css('top', t+'%')
+  var date = $active.attr('id').replace('block-','').split('-')[0]
+  if(date === '1848' || date === '2015') date = ''
+  $date.empty().html(date)
+
+}
+
 function init(app){
   $(window).keydown(function(e){
     e.preventDefault()
@@ -63,10 +93,11 @@ function init(app){
     }
     var offset = $next.offset().top
     controller.scrollTo(offset)
+    adjustTimeline()
   })
 
+  window.scrollQueue.push(adjustTimeline)
   window.scrollQueue.push(adjustOffsetPosition)
-
 }
 
 module.exports = init
