@@ -76,6 +76,11 @@
     h2,p
       color $color--white
       text-align center
+.slide--1976
+  h2
+    color white
+  p
+    color $color--pale-white
 .slide--1965,
 .slide--1979
   background $color--dark-blue
@@ -105,7 +110,11 @@
   padding-bottom 150px
   +media-query( $screen, $bp--desktop )
     padding-bottom 0px
-// backgrounds
+.slide--1992
+  h2
+    color white
+  p
+    color $color--pale-white
 
 .slide__bg
   display none
@@ -125,8 +134,15 @@
 .slide__bg--1915
   z-index 50
   background-image url('../images/1915-calculations.png')
-.slide__bg--2006-b
-  background-image url('../images/2006-b.jpg')
+.slide__bg--1976
+  // background-color black
+  background url('../images/1979-orbits-background.png')
+.slide__bg--1976-1
+  background-image url('../images/1976-bg-1.png')
+.slide__bg--1976-2
+  background-image url('../images/1976-bg-2.png')
+.slide__bg--1976-3
+  background-image url('../images/1976-bg-3.png')
 .slide__bg--1986
   background-image url('../images/1986-blue-glow.png')
 .slide__bg--stars
@@ -142,6 +158,10 @@
 .slide__bg--1988-b-bg
   background-image url('../images/1988-b-bg.png')
   background-position right center
+.slide__bg--1992
+  background-image url('../images/1992-background.jpg')
+.slide__bg--2006-b
+  background-image url('../images/2006-b.jpg')
 
 .slide__image--1978
   size 100% 400px
