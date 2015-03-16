@@ -1,5 +1,6 @@
 var data = {}
 
+data['title'] = 'Роли озвучивали...'
 data['links-title'] = 'Ссылки на материалы'
 data['credits-title'] = '«История исследования Плутона»'
 data['credits-sub-title'] = 'Проект сайта <span>«Большая Вселенная»</span>'

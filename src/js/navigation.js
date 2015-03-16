@@ -89,7 +89,16 @@ Navigation.prototype.scrollTimeline = function () {
     date = this.$els.active.attr('id').replace('block-','').split('-')[0]
   }
 
+  this.setCursorDate( date )
+  this.setDocumentTitle( this.$els.active.data('title') )
+}
+
+Navigation.prototype.setCursorDate = function (date) {
   this.$els.date.empty().html(date)
+}
+
+Navigation.prototype.setDocumentTitle = function (title) {
+  document.title = title.replace('<br>',' ')
 }
 
 Navigation.prototype.handleKeys = function (e) {
@@ -106,7 +115,6 @@ Navigation.prototype.handleKeys = function (e) {
   var $next = this.getNext(direction)
   var offset = $next.offset().top
   this.controller.scrollTo(offset)
-  this.adjustTimeline()
 }
 
 Navigation.prototype.init = function (){
