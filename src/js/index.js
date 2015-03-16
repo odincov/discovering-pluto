@@ -20,9 +20,11 @@ require('./lib/dimensions-controller')(app)
 require('./animations')(app)
 require('./countdown')(app)
 require('./subscribe-form')(app)
-require('./navigation')(app)
+var Navigation = require('./navigation')
 
 domready(function(){
   console.log('hello, pluto!')
   app.msgs.emit('ready')
+  var navigation = new Navigation()
+  navigation.init()
 })

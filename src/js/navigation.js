@@ -1,103 +1,121 @@
 var ScrollMagic = require('../vendor/ScrollMagic/js/jquery.scrollmagic').Controller
+
 var ScrollToPlugin = require('./lib/ScrollToPlugin.min.js')
 var debug = require('debug')('Navigation')
 var domready = require('domready')
-var waypoints = require('../vendor/waypoints/lib/jquery.waypoints.min')
 
-var controller = new ScrollMagic()
+function Navigation () {
+  this.controller = new ScrollMagic()
+  this.controller.scrollTo(function (offset) {
+    TweenMax.to(window, .5, {
+      scrollTo: {
+        y: offset,
+        autokill: true
+      },
+      ease: Cubic.easeInOut
+    })
+  });
 
-controller.scrollTo(function(offset){
-  TweenMax.to(window, .5, {
-    scrollTo: {
-      y: offset,
-      autokill: true
-    },
-    ease: Cubic.easeInOut
-  })
-})
+  this.$els = {
+    timeline: $('.timeline'),
+    cursor: $('.timeline__date-cursor'),
+    blocks: $('.js-nav-block'),
+    slides: $('section.slide'),
+    date: $('.timeline__date')
+  }
+}
 
-function getNext(direction){
+Navigation.prototype.getNext = function (direction){
   var $next
-  $blocks = $('.js-nav-block')
-  $active = $('.js-nav-block-active')
   switch(direction){
     case 'down':
-      $next = $blocks.eq($blocks.index($active)+1)
-      if($next.length == 0) $next = $blocks.eq(0)
+      $next = this.$els.blocks.eq(this.$els.blocks.index(this.$els.active)+1)
+      if($next.length == 0) $next = this.$els.blocks.eq(0)
       break
     case 'prev':
-      $next = $blocks.eq($blocks.index($active)-1)
-      if($next.length == 0) $next = $blocks.eq($blocks.length)
+      $next = this.$els.blocks.eq(this.$els.blocks.index(this.$els.active)-1)
+      if($next.length == 0) $next = this.$els.blocks.eq(this.$els.blocks.length)
       break
   }
-  $active.removeClass('js-nav-block-active')
-  $next.addClass('js-nav-block-active')
+  this.$els.active = $next
   return $next
 }
 
-function adjustOffsetPosition () {
+Navigation.prototype.adjustOffsetPosition = function () {
+  var that = this
+
   var wScrollTop = $(window).scrollTop()
   var wHeight = $(window).height()
-  $('.js-nav-block').each(function(){
+
+  this.$els.blocks.each(function(){
     var offset = $(this).offset().top
     var height = $(this).height()
     if( offset-height/2 <= wScrollTop && offset+height/2 >= wScrollTop) {
       if(height <= wHeight){
-        controller.scrollTo(offset)
+        that.controller.scrollTo(offset)
       }
-      $('.js-nav-block-active').removeClass('js-nav-block-active')
-      $(this).addClass('js-nav-block-active')
+      that.$els.active = $(this)
       window.location.hash = $(this).attr('id').replace('block-','')
     }
   })
 }
 
-function adjustTimeline () {
-  var $timeline = $('.timeline')
-  var $cursor = $('.timeline__date-cursor')
-  var $blocks = $('.js-nav-block')
-  var $slides = $('section.slide')
-  var $active = $('.js-nav-block-active')
-  var $date = $('.timeline__date')
-
-  var l = $slides.length
-  var p = $slides.index($active)
-  var t = p/l*100
-  var cbi = $blocks.index($active)
-
-  if( t < 0 ) {
-    $timeline.css({ 'opacity': '0' })
-    t = (cbi === 0) ? 0 : 100
-  }
-  else {
-    setTimeout(function () {
-      $timeline.css('opacity','1')
-    }, 500)
-  }
-
-  $cursor.css('top', t+'%')
-  var date = $active.attr('id').replace('block-','').split('-')[0]
-  if(date === '1848' || date === '2015') date = ''
-  $date.empty().html(date)
-
-}
-
-function init(app){
-  $(window).keydown(function(e){
-    e.preventDefault()
-
-    if (e.which == 40 || e.which == 39 || e.which == 32) {
-      var $next = getNext('down')
-    } else if (e.which == 38 || e.which == 37) {
-      var $next = getNext('prev')
-    }
-    var offset = $next.offset().top
-    controller.scrollTo(offset)
-    adjustTimeline()
+Navigation.prototype.scrollTimeline = function () {
+  var date = ''
+  var currentScroll = $(window).scrollTop()
+  var firstSlideOffsetTop = $(this.$els.slides[0]).offset().top
+  var lastSlideOffsetTop = $(this.$els.slides[this.$els.slides.length-1]).offset().top
+  var slidesHeight = 0
+  this.$els.slides.each(function(){
+    slidesHeight += $(this).height() 
   })
 
-  window.scrollQueue.push(adjustTimeline)
-  window.scrollQueue.push(adjustOffsetPosition)
+  var l = lastSlideOffsetTop-firstSlideOffsetTop
+  var p = currentScroll-firstSlideOffsetTop
+  var t = p/l*100
+
+  if( t < 0  || t > 100) {
+    this.$els.timeline.css({ 'opacity': '0' })
+  }
+  else {
+    this.$els.timeline.css('opacity','1')
+  }
+
+  this.$els.cursor.css('top', t+'%')
+
+  var i = this.$els.slides.index(this.$els.active)
+
+  if ( i > 0 && i < (this.$els.slides.length-1)) {
+    date = this.$els.active.attr('id').replace('block-','').split('-')[0]
+  }
+
+  this.$els.date.empty().html(date)
 }
 
-module.exports = init
+Navigation.prototype.handleKeys = function (e) {
+  var direction = 'down'
+
+  if (e.which == 40 || e.which == 39 || e.which == 32) {
+    e.preventDefault()
+    direction = 'down'
+  } else if (e.which == 38 || e.which == 37) {
+    e.preventDefault()
+    direction = 'prev'
+  }
+
+  var $next = this.getNext(direction)
+  var offset = $next.offset().top
+  this.controller.scrollTo(offset)
+  this.adjustTimeline()
+}
+
+Navigation.prototype.init = function (){
+  this.$els.active = this.$els.blocks[0]
+
+  $(window).on('keydown', this.handleKeys.bind(this))
+  $(window).on('scroll', this.scrollTimeline.bind(this))
+  // window.scrollQueue.push(this.adjustTimeline.bind(this))
+  window.scrollQueue.push(this.adjustOffsetPosition.bind(this))
+}
+
+module.exports = Navigation
