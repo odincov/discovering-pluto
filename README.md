@@ -18,8 +18,26 @@ Development
 
 Deploy
 ---
-1) Setup ./ftp-config.js file
-2) To upload files run this command in console:
+Setup ./ftp-config.js file using this as a template:
+
+```
+module.exports = {
+  en: {
+    host: '',
+    user: '',
+    pass: '',
+    remotePath: ''
+  },
+  ru: {
+    host: '',
+    user: '',
+    pass: '',
+    remotePath: ''
+  }
+}
+```
+
+To upload files run this command in console:
 
 ```
 npm run upload
