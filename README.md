@@ -15,13 +15,13 @@ Git and NodeJS
 
 ## Installation
 
-`git clone git@github.com:odincov/discovering-pluto.git`
+Run in your console `git clone git@github.com:odincov/discovering-pluto.git`.
 
 To get started jump to the root directory of the project and run `npm install && bower install && npm run setup && npm run build` (just copy-paste it really) this will install all project dependencies and modules locally and setup and build the website.
 
 ### Development
 
-Use `gulp go` to run a server, which will watch for any changes in files and rebuild the website. This command will also run browser-sync, which will restart the website upon rebuild. Use url shown in the console to access the website in your browser.
+Use `gulp go` to run a server which will watch for any changes in files and rebuild and reload everything for you in your browser. The url can be found in the console after your run the command.
 
 ### Build
 
@@ -29,7 +29,7 @@ To build website simply run `npm run build`.
 
 ### Deploy
 
-Setup `./ftp-config.js` file using this as a template:
+Setup ftp-config.js file in the project's root directory using this as a template:
 
 ```
 module.exports = {
@@ -50,13 +50,6 @@ module.exports = {
 
 Run `npm run upload` to upload files to your server. To push a specific language only, use gulp task: `gulp upload --lang en`.
 
-## Todo
-
-* Better project description
-* Add repository usage description
-* Add CHANGELOG.md
-* Add an instruction for contributing to the project to README.md
-* Add an instruction for private usage of the repository to README.md
 
 ## Contribute translation
 
@@ -67,3 +60,13 @@ To contribute translation follow these steps:
 3. Copy existiong language directory and rename to the language you'd like to make traslation to e.g. `cp -r en/ de/`
 4. Translate text in all files in that directory
 5. Make a pull request
+
+ 
+## Todo
+
+* Better project description
+* Add repository usage description
+* Add CHANGELOG.md
+* Add an instruction for contributing to the project to README.md
+* Add an instruction for private usage of the repository to README.md
+
