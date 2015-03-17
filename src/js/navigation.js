@@ -60,6 +60,19 @@ Navigation.prototype.adjustOffsetPosition = function () {
   })
 }
 
+Navigation.prototype.checkHash = function () {
+  var hash = window.location.hash
+  if( hash.length > 0 ){
+    hash  = hash.replace('#','#block-')
+    this.$els.active = this.$els.blocks.filter( hash )
+  } else {
+    this.$els.active = this.$els.blocks[0]
+    this.setDocumentTitle( $(this.$els.active).data('title') )
+  }
+
+  this.controller.scrollTo(this.$els.active.offset().top)
+}
+
 Navigation.prototype.scrollTimeline = function () {
   var date = ''
   var currentScroll = $(window).scrollTop()
@@ -90,7 +103,7 @@ Navigation.prototype.scrollTimeline = function () {
   }
 
   this.setCursorDate( date )
-  this.setDocumentTitle( this.$els.active.data('title') )
+  this.setDocumentTitle( $( this.$els.active ).data('title') )
 }
 
 Navigation.prototype.setCursorDate = function (date) {
@@ -118,12 +131,10 @@ Navigation.prototype.handleKeys = function (e) {
 }
 
 Navigation.prototype.init = function (){
-  this.$els.active = this.$els.blocks[0]
-
   $(window).on('keydown', this.handleKeys.bind(this))
   $(window).on('scroll', this.scrollTimeline.bind(this))
-  // window.scrollQueue.push(this.adjustTimeline.bind(this))
   window.scrollQueue.push(this.adjustOffsetPosition.bind(this))
+  this.checkHash()
 }
 
 module.exports = Navigation
