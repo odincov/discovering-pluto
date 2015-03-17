@@ -9,6 +9,7 @@
 
 If you would like to add translation to another language you are welcome to do so! See [how to add new translation](#contribute-translation).
 
+<<<<<<< HEAD
 ## Requirements
 
 * Git
@@ -50,7 +51,7 @@ module.exports = {
 }
 ```
 
-Run `npm run upload` to upload files to your server. To push a specific language version use gulp task: `gulp upload --lang en`.
+Run `npm run upload` to upload files to your server. To push a specific language only, use gulp task: `gulp upload --lang en`.
 
 ## Todo
 
