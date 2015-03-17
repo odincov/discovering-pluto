@@ -1,6 +1,6 @@
-# History of The Discovery of Pluto website
+# The History of The Discovery of Pluto
 
-**History of The Discovery of Pluto** [http://discoveringpluto.com](http://discoveringpluto.com) is an interactive project about the hisory of the Discovery of the dwarf planet Pluto, created by **BigUniverse.Ru** — an online magazine popularizing astronomy.
+[**History of The Discovery of Pluto**](http://discoveringpluto.com) is a timeline that tells a story of the discovery of the dwarf planet Pluto. This project is created by [**BigUniverse.Ru**](http://biguniverse.ru) — an online magazine popularizing astronomy.
 
 ## Multilingual content
 
@@ -9,12 +9,10 @@
 
 If you would like to add translation to another language you are welcome to do so! See [how to add new translation](#contribute-translation).
 
-<<<<<<< HEAD
 ## Requirements
 
-* Git
-* gulp >= 3.8.10
-* Bower >= 1.3.12
+* NodeJS
+* Gulp
 
 ## Installation
 
@@ -28,7 +26,7 @@ Use `gulp go` to run a server, which will watch for any changes in files and reb
 
 ### Build
 
-To build the project simply run `npm run build`.
+To build website simply run `npm run build`.
 
 ### Deploy
 
@@ -55,6 +53,8 @@ Run `npm run upload` to upload files to your server. To push a specific language
 
 ## Todo
 
+* Better project description
+* Add repository usage description
 * Add CHANGELOG.md
 * Add an instruction for contributing to the project to README.md
 * Add an instruction for private usage of the repository to README.md
