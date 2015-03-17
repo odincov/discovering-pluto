@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build --lang ru && gulp build --lang en",
+    "upload": "gulp upload --lang ru && gulp upload --lang en"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +35,8 @@
     "gulp-ftp": "^1.0.3",
     "gulp-minify-css": "^0.4.6",
     "gulp-sourcemaps": "^1.5.0",
-    "waypoints": "^3.1.1"
+    "waypoints": "^3.1.1",
+    "domready": "^1.0.7",
+    "browser-sync": "^2.3.0"
   }
 }
