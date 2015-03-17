@@ -15,12 +15,12 @@ npm install && bower install && npm run setup && npm run build
 Development
 ---
 This will run a server using browser-sync and will start watching 
-any files for changes to rebuild and restart website:
+files for changes to rebuild and restart website:
 ```
 gulp go
 ```
 Running this will result with a url in your console, 
-use it to get access to the website with your browser.
+use it to get access to the website.
 
 Deploy
 ---
