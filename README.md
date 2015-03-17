@@ -11,14 +11,13 @@ If you would like to add translation to another language you are welcome to do s
 
 ## Requirements
 
-* NodeJS
-* Gulp
+Git and NodeJS
 
 ## Installation
 
-* Source: [https://github.com/odincov/discovering-pluto.git](https://github.com/odincov/discovering-pluto.git)
+`git clone git@github.com:odincov/discovering-pluto.git`
 
-To get started run `npm install && bower install && npm run setup && npm run build` (just copy paste it really) this will install Gulp and Bower locally and setup and build the website.
+To get started jump to the root directory of the project and run `npm install && bower install && npm run setup && npm run build` (just copy-paste it really) this will install all project dependencies and modules locally and setup and build the website.
 
 ### Development
 
