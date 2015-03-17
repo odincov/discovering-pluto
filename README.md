@@ -36,9 +36,11 @@ module.exports = {
   }
 }
 ```
-
 To upload files run this command in console:
-
 ```
 npm run upload
+```
+Or you can use gulp task to push a specific language version only
+```
+gulp upload --lang en
 ```
