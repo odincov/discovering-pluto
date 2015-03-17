@@ -27,7 +27,7 @@ Use `gulp go` to run a server which will watch for any changes in files and rebu
 
 To build website simply run `npm run build`.
 
-### Deploy
+## Deploy
 
 Setup ftp-config.js file in the project's root directory using this as a template:
 
