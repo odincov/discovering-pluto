@@ -24,7 +24,7 @@ use it to get access to the website.
 
 Deploy
 ---
-Setup ./ftp-config.js file using this as a template:
+Setup ./ftp-config.js file using this template:
 
 ```
 module.exports = {
