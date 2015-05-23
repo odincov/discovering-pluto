@@ -3,7 +3,6 @@ machine:
     version: 2.7.3
   node:
     version: 0.12.0
-
 dependencies:
   post:
     - pip install awscli
@@ -11,7 +10,6 @@ dependencies:
     - npm install -g gulp
     - npm install -g gulp-cli 
     - gulp build
-
 deployment:
   production:
     branch: master
