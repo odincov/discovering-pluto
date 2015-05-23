@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "touch ./ftp-config.js",
     "build": "gulp build --lang ru && gulp build --lang en",
     "upload": "gulp upload --lang ru && gulp upload --lang en"
   },
