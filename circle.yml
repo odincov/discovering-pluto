@@ -15,5 +15,4 @@ deployment:
   production:
     branch: master
     commands:
-      - aws s3 sync dist/ s3://discovering-pluto --region eu-central-1 --exclude "*" --include "*.css" --include "*.js" --content-encoding gzip --cache-control public,max-age=30672000
-      - aws s3 sync dist/ s3://discovering-pluto --region eu-central-1 --exclude "*.js" --exclude "*.css"
+      - aws s3 sync dist/ s3://discovering-pluto --region eu-central-1

@@ -105,7 +105,7 @@ gulp.task('gzip', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['stylus','jade','js','iconify','images','videos','gzip'])
+gulp.task('build', ['stylus','jade','js','iconify','images','videos'])
 
 gulp.task('go', ['build','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
