@@ -1,15 +1,17 @@
-machine: 
+machine:
   python:
     version: 2.7.3
   node:
     version: 0.12.0
+
 dependencies:
   post:
     - pip install awscli
     - bower install
     - npm install -g gulp
-    - npm install -g gulp-cli 
+    - npm install -g gulp-cli
     - gulp build
+
 deployment:
   production:
     branch: master
