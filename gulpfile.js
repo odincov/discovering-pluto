@@ -14,6 +14,9 @@ var gulp = require('gulp')
   , minifyCSS = require('gulp-minify-css')
   , ftp = require('gulp-ftp')
   , defaultLang = 'ru'
+  , gulpif = require('gulp-if')
+  , gzip = require('gulp-gzip')
+  , size = require('gulp-size')
 
 gulp.task('stylus', function () {
   var lang = gutil.env.lang || defaultLang
@@ -94,7 +97,15 @@ gulp.task('browser-sync', function() {
   })
 })
 
-gulp.task('build', ['stylus','jade','js','iconify','images','videos'])
+gulp.task('gzip', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(size({title: 'build', gzip: true }))
+    .pipe(gulpif('*.js', gzip({ append: false })))
+    .pipe(gulpif('*.css', gzip({ append: false })))
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('build', ['stylus','jade','js','iconify','images','videos','gzip'])
 
 gulp.task('go', ['build','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
