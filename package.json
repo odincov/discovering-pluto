@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "touch ./ftp-config.js",
+    "test": "",
     "build": "gulp build --lang ru && gulp build --lang en",
     "upload": "gulp upload --lang ru && gulp upload --lang en"
   },
