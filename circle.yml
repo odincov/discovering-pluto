@@ -4,6 +4,7 @@ machine:
 
 dependencies:
   post:
+    - pip install awscli
     - npm install -g gulp
     - npm install -g gulp-cli 
     - gulp build
@@ -12,6 +13,5 @@ deployment:
   production:
     branch: master
     commands:
-      - pip install awscli
       - aws s3 sync dist/ s3://discovering-pluto --exclude "*" --include "*.css" --include "*.js" --content-encoding gzip --cache-control public,max-age=30672000
       - aws s3 sync dist/ s3://discovering-pluto --exclude "*.js" --exclude "*.css"
