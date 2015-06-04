@@ -29,6 +29,7 @@
     "iconify": "0.0.2",
     "jquery": "^2.1.3",
     "kouto-swiss": "^0.11.6",
+    "merge-stream": "^0.1.7",
     "node-sass": "^3.1.2"
   },
   "dependencies": {
