@@ -16,8 +16,8 @@ deployment:
   production:
     branch: master
     commands:
-      - aws s3 sync dist/ s3://discovering-pluto --region eu-central-1
+      - aws s3 sync dist/ s3://www.discoveringpluto.com --region eu-central-1
   staging:
     branch: develop
     commands:
-      - aws s3 sync dist/ s3://discovering-pluto-staging --region eu-central-1
+      - aws s3 sync dist/ s3://staging.discoveringpluto.com --region eu-central-1
