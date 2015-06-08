@@ -10,6 +10,7 @@
   text-transform uppercase
   font-size $milli-size
   font-family $font--headlines
+  letter-spacing rem(1px)
   color $color--pale-white--dark
   +media-query( $screen, $bp--tablet )
     width 450px
@@ -32,7 +33,7 @@
   height 50px
   font-size $zeta-size
   line-height 50px
-  color $color--pale-white 
+  color $color--pale-white
   background #212125
   border solid 1px #212125
   border-left solid 1px #27272b
@@ -58,7 +59,7 @@
   background-image linear-gradient( 180deg, #0e78d7,  #0a51c3)
   border none
   border-top solid 1px #63a8e5
-  font-weight 300 
+  font-weight 300
   letter-spacing .15em
   margin-top 1em
   +media-query( $screen, $bp--tablet )
@@ -72,10 +73,6 @@
     margin 2em auto
   +media-query( $screen, $bp--desktop )
     width 600px
-.subscribe__checkbox span
-  font-size $milli-size
-  color $color--pale-white--dark
-  padding-left .5em
 .subscribe__thank-you-wrapper
   display none
   margin 0 auto

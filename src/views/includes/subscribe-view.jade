@@ -5,33 +5,31 @@
       ul.timer__list
         li
           span.timer__number.timer__number--days
-          span.timer__title= subscribeView['counter']['day']
+          span.timer__unit-title= subscribeView['counter']['day']
         li
           span.timer__number.timer__number--divider : 
         li
           span.timer__number.timer__number--hours
-          span.timer__title= subscribeView['counter']['hours']
+          span.timer__unit-title= subscribeView['counter']['hours']
         li
           span.timer__number.timer__number--divider : 
         li
           span.timer__number.timer__number--minutes
-          span.timer__title= subscribeView['counter']['minutes']
+          span.timer__unit-title= subscribeView['counter']['minutes']
         li
           span.timer__number.timer__number--divider : 
         li
           span.timer__number.timer__number--seconds
-          span.timer__title= subscribeView['counter']['seconds']
+          span.timer__unit-title= subscribeView['counter']['seconds']
     p.subscribe__date= subscribeView['content']
     hr
     .subscribe__form-wrapper
+      h3.heading.heading--subscribe-title= subscribeView['invitation-title']
       p.subscribe__text= subscribeView['invitation']
       form
         .subscribe__form-group
           input#subscribe_email.subscribe__input(type='text', placeholder= subscribeView['email'])
           button#subscribe_button.subscribe__button= subscribeView['send']
-        label.subscribe__checkbox
-          input#subscribe_for_news(type='checkbox')
-          span= subscribeView['sign-up-for-news']
       p.subscribe__error.subscribe__error--email= subscribeView['error']
       p.subscribe__error.subscribe__error--email-exists= subscribeView['error-email-exists']
       p.subscribe__error.subscribe__error--other= subscribeView['error-other']
