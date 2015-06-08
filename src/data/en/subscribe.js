@@ -1,29 +1,29 @@
 var data = {}
 
-data['title'] = 'До встречи миссии<br>«Новые горизонты» с Плутоном<br>осталось'
+data['title'] = 'Countdown until <br>the New Horizons spacecraft <br>meets Pluto'
 
 data['counter'] = {
-  day : 'Дни',
-  hours : 'Часы',
-  minutes : 'Мин',
-  seconds : 'Сек'
+  day : 'Days',
+  hours : 'Hours',
+  minutes : 'Min',
+  seconds : 'Sec'
 }
 
-data['content'] = '«Новые горизонты» пройдет на кратчайшем расстоянии от Плутона 14 июля 2015 года, в 11:49:59 по всемирному времени (UTC).'
+data['content'] = 'The New Horizons spacecraft will pass Pluto at its closest approach on July 14, 2015 at 11:49:59 UTC.'
 
-data['invitation'] = 'Если вы хотите получить напоминание о встрече космического аппарата «Новые горизонты» с Плутоном, введите адрес своей электронной почты. В день события мы отправим Вам письмо со сылкой на прямую трансляцию.'
-data['email'] = 'Адрес электронной почты'
-data['send'] = 'Отправить'
-data['sign-up-for-news'] = 'Получать новости о миссии «Новые горизонты»'
+data['invitation-title'] = 'Receive a reminder'
+data['invitation'] = 'Subscribe to receive a reminder about New Horizons rendezvous with Pluto and other notifications about the mission.'
+data['email'] = 'Email address'
+data['send'] = 'Subscribe'
 
-data['thanks-title'] = 'Спасибо!'
+data['thanks-title'] = 'Thank you!'
 data['thanks-msg'] = [
-  'Напоминание о встрече «Новые горизонты» с Плутоном будет выслано на указанный вами адрес 15 июля 2015 г.',
-  'Хотите <a href="#">поддержать сайт</a>?<br>Ваша помощь даст нам возможность воплотить в жизнь новые проекты, популяризующие научное знание.'
+  'A reminder will be emailed to you on the day of the event.',
+  'Would you like to support <a href="#">this website</a>? By donating, you help us create further projects that popularize scientific knowledge.'
 ]
 
-data['error'] = 'Ошибка! Проверьте пожалуйста ваш Емейл.'
-data['error-email-exists'] = 'Ваш Емейл у нас уже есть.'
-data['error-other'] = 'Что-то пошло не так, попробуйте через 5 минут!'
+data['error'] = 'Oops! Make sure that the email address you entered is correct.'
+data['error-email-exists'] = 'Hmm... It looks like you have already subscribed.'
+data['error-other'] = 'Something went wrong. Try again in a couple of minutes.'
 
 module.exports = data

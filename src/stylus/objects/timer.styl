@@ -1,7 +1,7 @@
 .timer
   width 100%
   float left
-  margin-bottom 3em
+  margin-bottom rem(30px)
 .timer__list
   font-family $font--headlines--condenced
   color $color--white
@@ -11,9 +11,13 @@
     width 370px
   +media-query( $screen, $bp--desktop )
     width 550px
-.timer__title
+.timer__unit-title
+  font-family $font--headlines--condenced 
+  font-size $milli-size
   text-transform uppercase
-  font-size $micro-size
+  letter-spacing rem(3px)
+  color $color--pale-white
+  margin-top rem(15px)
 .timer li
   float left
 .timer li span
