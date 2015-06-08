@@ -33,14 +33,14 @@ gulp.task('jade', function () {
     return gulp.src('./src/views/pages/*.jade')
       .pipe(jade({ 
         locals: { 
-          intro : require(dataPath+'/intro.js'),
-          slides : require(dataPath+'/slides.js'),
-          subscribeView : require(dataPath+'/subscribe.js'),
-          footer : require(dataPath+'/footer.js'),
-          links : require(dataPath+'/links.js'),
-          credits : require(dataPath+'/credits.js'),
-          references : require(dataPath+'/references.js'),
-          gratitudes : require(dataPath+'/gratitudes.js')
+          intro : require(dataPath+'/intro.json'),
+          slides : require(dataPath+'/slides.json'),
+          subscribeView : require(dataPath+'/subscribe.json'),
+          footer : require(dataPath+'/footer.json'),
+          links : require(dataPath+'/links.json'),
+          credits : require(dataPath+'/credits.json'),
+          references : require(dataPath+'/references.json'),
+          gratitudes : require(dataPath+'/gratitudes.json')
         }
       }))
       .pipe(gulp.dest('./dist/'+lang+'/'))
