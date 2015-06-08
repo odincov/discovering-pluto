@@ -17,6 +17,8 @@ var gulp = require('gulp')
   , size = require('gulp-size')
   , merge = require('merge-stream')
 
+  , langs = ['ru','en']
+
 gulp.task('stylus', function () {
   return gulp.src('./src/stylus/main.styl')
     .pipe(stylus({ use: [ koutoSwiss() ] }))
@@ -25,9 +27,7 @@ gulp.task('stylus', function () {
     .pipe(reload({ stream : true }))
 })
 
-gulp.task('jade', function() {
-  var langs = ['ru','en'];
-
+gulp.task('jade', function () {
   var tasks = langs.map(function (lang) {
     var dataPath = './src/data/'+lang
     return gulp.src('./src/views/pages/*.jade')
@@ -47,18 +47,22 @@ gulp.task('jade', function() {
   });
 
   return merge(tasks);
-  
-})
+});
 
-gulp.task('images', function() {
+gulp.task('index', function () {
+  return gulp.src('./dist/'+langs[0]+'/index.html')
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('images', function () {
   return gulp.src('./src/images/*.*')
     .pipe(gulp.dest('./dist/images/'))
-})
+});
 
-gulp.task('videos', function() {
+gulp.task('videos', function () {
   return gulp.src('./src/videos/*.*')
     .pipe(gulp.dest('./dist/videos/'))
-})
+});
 
 gulp.task('iconify', function() {
   return iconify({
@@ -105,9 +109,9 @@ gulp.task('gzip', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['stylus','jade','js','iconify','images','videos'])
+gulp.task('build', ['stylus','jade','js','iconify','images','videos','index'])
 
-gulp.task('go', ['build','browser-sync'], function() {
+gulp.task('go', ['build','index','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
   gulp.watch('./src/views/**/*.jade', ['jade', reload])
   gulp.watch('./src/js/**/*.js', ['js', reload])
