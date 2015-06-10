@@ -1,27 +1,27 @@
 {
-  "title": "Countdown until <br>the New Horizons spacecraft <br>meets Pluto",
+  "title": "До встречи миссии<br>«Новые горизонты» с Плутоном<br>осталось",
 
   "counter": {
-    "day": "Days",
-    "hours": "Hours",
-    "minutes": "Min",
-    "seconds": "Sec"
+    "day": "Дни",
+    "hours": "Часы",
+    "minutes": "Мин",
+    "seconds": "Сек"
   },
 
-  "content": "The New Horizons spacecraft will pass Pluto at its closest approach on July 14, 2015 at 11:49:59 UTC.",
+  "content": "«Новые горизонты» пройдет на кратчайшем расстоянии от Плутона 14 июля 2015 года, в 11:49:59 по всемирному времени (UTC).",
 
-  "invitation-title": "Receive a reminder",
-  "invitation": "Subscribe to receive a reminder about New Horizons rendezvous with Pluto and other notifications about the mission.",
-  "email": "Email address",
-  "send": "Subscribe",
+  "invitation-title": "Получить напоминание",
+  "invitation": "Если вы хотите получить напоминание о встрече космического аппарата «Новые горизонты» с Плутоном, введите адрес своей электронной почты.",
+  "email": "Адрес электронной почты",
+  "send": "Подписаться",
 
-  "thanks-title": "Thank you!",
+  "thanks-title": "Спасибо!",
   "thanks-msg": [
-    "A reminder will be emailed to you on the day of the event.",
-    "Would you like to support <a href=\"#\">this website</a>? By donating, you help us create further projects that popularize scientific knowledge."
+    "В день события мы отправим Вам напоминание на указанный адрес.",
+    "Хотите <a href="#">поддержать сайт</a>?<br>Ваша помощь даст нам возможность воплотить в жизнь новые проекты, популяризующие научное знание."
   ],
 
-  "error": "Oops! Make sure that the email address you entered is correct.",
-  "error-email-exists": "Hmm... It looks like you have already subscribed.",
-  "error-other": "Something went wrong. Try again in a couple of minutes."
+  "error": "Ошибка! Проверьте пожалуйста ваш Емейл.",
+  "error-email-exists": "Хм... Похоже, что Вы уже подписаны на эту рассылку.",
+  "error-other": "Что-то пошло не так! Попробуйте еще раз через несколько минут."
 }
