@@ -109,7 +109,10 @@ gulp.task('gzip', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['stylus','jade','js','iconify','images','videos','index'])
+gulp.task('build', ['stylus','jade','js','iconify','images','videos'], function () {
+  return gulp.src('./dist/'+langs[0]+'/index.html')
+    .pipe(gulp.dest('./dist/'));
+})
 
 gulp.task('go', ['build','index','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
