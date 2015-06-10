@@ -30,19 +30,18 @@ gulp.task('stylus', function () {
 gulp.task('jade', function () {
   var tasks = langs.map(function (lang) {
     var dataPath = './src/data/'+lang
+    var data = {
+      intro : require(dataPath+'/intro.json'),
+      slides : require(dataPath+'/slides.json'),
+      subscribeView : require(dataPath+'/subscribe.json'),
+      footer : require(dataPath+'/footer.json'),
+      links : require(dataPath+'/links.json'),
+      credits : require(dataPath+'/credits.json'),
+      references : require(dataPath+'/references.json'),
+      gratitudes : require(dataPath+'/gratitudes.json')
+    };
     return gulp.src('./src/views/pages/*.jade')
-      .pipe(jade({ 
-        locals: { 
-          intro : require(dataPath+'/intro.json'),
-          slides : require(dataPath+'/slides.json'),
-          subscribeView : require(dataPath+'/subscribe.json'),
-          footer : require(dataPath+'/footer.json'),
-          links : require(dataPath+'/links.json'),
-          credits : require(dataPath+'/credits.json'),
-          references : require(dataPath+'/references.json'),
-          gratitudes : require(dataPath+'/gratitudes.json')
-        }
-      }))
+      .pipe(jade({locals: data}))
       .pipe(gulp.dest('./dist/'+lang+'/'))
   });
 
@@ -93,7 +92,6 @@ gulp.task('js', function(){
 })
 
 gulp.task('browser-sync', function() {
-  var lang = 'ru';
   browserSync({
     server: { baseDir: './dist/' },
     port: 7200,
