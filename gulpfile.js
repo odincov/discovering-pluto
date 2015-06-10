@@ -12,64 +12,67 @@ var gulp = require('gulp')
   , iconify = require('gulp-iconify')
   , gutil = require('gulp-util')
   , minifyCSS = require('gulp-minify-css')
-  , ftp = require('gulp-ftp')
-  , defaultLang = 'ru'
   , gulpif = require('gulp-if')
   , gzip = require('gulp-gzip')
   , size = require('gulp-size')
+  , merge = require('merge-stream')
+
+  , langs = ['ru','en']
 
 gulp.task('stylus', function () {
-  var lang = gutil.env.lang || defaultLang
   return gulp.src('./src/stylus/main.styl')
     .pipe(stylus({ use: [ koutoSwiss() ] }))
     .pipe(gutil.env.type === 'production' ? minifyCSS() : gutil.noop())
-    .pipe(gulp.dest('./dist/'+lang+'/css/'))
+    .pipe(gulp.dest('./dist/css/'))
     .pipe(reload({ stream : true }))
 })
 
-gulp.task('jade', function() {
-  var lang = gutil.env.lang || defaultLang
-  var dataPath = './src/data/'+lang
-  return gulp.src('./src/views/pages/*.jade')
-    .pipe(jade({ 
-      locals: { 
-        intro : require(dataPath+'/intro.js'),
-        slides : require(dataPath+'/slides.js'),
-        subscribeView : require(dataPath+'/subscribe.js'),
-        footer : require(dataPath+'/footer.js'),
-        links : require(dataPath+'/links.js'),
-        credits : require(dataPath+'/credits.js'),
-        references : require(dataPath+'/references.js'),
-        gratitudes : require(dataPath+'/gratitudes.js')
-      }
-    }))
-    .pipe(gulp.dest('./dist/'+lang+'/'))
-})
+gulp.task('jade', function () {
+  var tasks = langs.map(function (lang) {
+    var dataPath = './src/data/'+lang
+    var data = {
+      intro : require(dataPath+'/intro.json'),
+      slides : require(dataPath+'/slides.json'),
+      subscribeView : require(dataPath+'/subscribe.json'),
+      footer : require(dataPath+'/footer.json'),
+      links : require(dataPath+'/links.json'),
+      credits : require(dataPath+'/credits.json'),
+      references : require(dataPath+'/references.json'),
+      gratitudes : require(dataPath+'/gratitudes.json')
+    };
+    return gulp.src('./src/views/pages/*.jade')
+      .pipe(jade({locals: data}))
+      .pipe(gulp.dest('./dist/'+lang+'/'))
+  });
 
-gulp.task('images', function() {
-  var lang = gutil.env.lang || defaultLang
+  return merge(tasks);
+});
+
+gulp.task('index', function () {
+  return gulp.src('./dist/'+langs[0]+'/index.html')
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('images', function () {
   return gulp.src('./src/images/*.*')
-    .pipe(gulp.dest('./dist/'+lang+'/images/'))
-})
+    .pipe(gulp.dest('./dist/images/'))
+});
 
-gulp.task('videos', function() {
-  var lang = gutil.env.lang || defaultLang
+gulp.task('videos', function () {
   return gulp.src('./src/videos/*.*')
-    .pipe(gulp.dest('./dist/'+lang+'/videos/'))
-})
+    .pipe(gulp.dest('./dist/videos/'))
+});
 
 gulp.task('iconify', function() {
-  var lang = gutil.env.lang || defaultLang
   return iconify({
     src: './src/icons/*.svg',
-    cssOutput: './dist/'+lang+'/css/',
-    pngOutput: './dist/'+lang+'/images/icons/',
+    cssOutput: './dist/css/',
+    pngOutput: './dist/images/icons/',
     scssOutput: './dist/scss/'
   })
 })
 
 gulp.task('js', function(){
-  var lang = gutil.env.lang || defaultLang
   return gulp.src('./src/js/index.js')
     .pipe(webpack({ 
       output : { filename : 'index.js' },
@@ -85,13 +88,12 @@ gulp.task('js', function(){
       }
     }))
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
-    .pipe(gulp.dest('./dist/'+lang+'/js/'))
+    .pipe(gulp.dest('./dist/js/'))
 })
 
 gulp.task('browser-sync', function() {
-  var lang = gutil.env.lang || defaultLang
   browserSync({
-    server: { baseDir: './dist/'+lang+'/' },
+    server: { baseDir: './dist/' },
     port: 7200,
     open: false
   })
@@ -105,9 +107,12 @@ gulp.task('gzip', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['stylus','jade','js','iconify','images','videos'])
+gulp.task('build', ['stylus','jade','js','iconify','images','videos'], function () {
+  return gulp.src('./dist/'+langs[0]+'/index.html')
+    .pipe(gulp.dest('./dist/'));
+})
 
-gulp.task('go', ['build','browser-sync'], function() {
+gulp.task('go', ['build','index','browser-sync'], function() {
   gulp.watch('./src/stylus/**/*.styl', ['stylus'])
   gulp.watch('./src/views/**/*.jade', ['jade', reload])
   gulp.watch('./src/js/**/*.js', ['js', reload])

@@ -2,16 +2,16 @@ doctype html
 html(lang='en')
 
   head
-  
+
     include includes/document-head
     include includes/ga-analytics
-  
+
   body
 
     block body-start
     block content
     block body-end
-      include includes/footer
+      // include includes/footer
     block scripts    
       script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-      script(src='js/index.js')
+      script(src='/js/index.js')

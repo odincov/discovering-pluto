@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6,
-.headline
+.headline, .heading
   color $base-font-color
   font-family $font--headlines
 
@@ -18,7 +18,7 @@ h6,
     font-size $kilo-size
   +media-query( $screen, $bp--desktop )
     font-size $mega-size
-    
+
 .headline--xxl span
   display block
   font-weight 900
@@ -43,7 +43,7 @@ h6,
     font-size $kilo-size
   +media-query( $screen, $bp--desktop )
     font-size $mega-size
-    
+
 .headline--slide
   text-transform uppercase
   font-weight 400
@@ -54,13 +54,13 @@ h6,
     font-size $sup-kilo-size
   +media-query( $screen, $bp--desktop )
     font-size $kilo-size
-    
-  
+
+
 .headline--m
   text-transform uppercase
   font-weight 100
-  letter-spacing 0.1em 
-  font-size $gamma-size 
+  letter-spacing 0.1em
+  font-size $gamma-size
   margin .75em 0
   +media-query( $screen, $bp--tablet )
     font-size $beta-size
@@ -68,7 +68,7 @@ h6,
     font-size $alpha-size
 
 .headline--xs
-  font-family $font--main 
+  font-family $font--main
   color $base-font-color
   font-size $epsilon-size
   margin-top 1em
@@ -76,5 +76,14 @@ h6,
     font-size $epsilon-size
 .headline--pale-white--dark
   color $color--pale-white--dark
-  span 
+  span
     color $color--pale-white
+
+.heading--subscribe-title
+  font-family $font--headlines--condenced
+  font-weight $light
+  font-size rem(20px)
+  letter-spacing rem(3px)
+  margin rem(30px)
+  +media-query( $screen, $bp-desktop )
+    font-size rem(25px)
