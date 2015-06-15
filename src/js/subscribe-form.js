@@ -1,9 +1,8 @@
 var request = require('superagent')
 var debug = require('debug')('Subscribe')
-var url = 'http://biguniverse.us9.list-manage.com/subscribe/post-json?u=41366b8e11625bef94f4219be&id=fdb902eb76&c=?'
-var new_horizons_group = 'group[16401][1]'
+var url = 'http://discoveringpluto.us9.list-manage.com/subscribe/post-json?u=41366b8e11625bef94f4219be&id=0c0285ad0e&c=?'
 
-function validateEmail(email) { 
+function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
@@ -36,9 +35,6 @@ function init(){
     $('.subscribe__error').hide()
 
     data = 'EMAIL='+email
-    if(signupForNews.is(':checked')) {
-      data += '&group[16401][1]=1'
-    }
 
     $.ajax({
       type: 'GET',
@@ -47,7 +43,7 @@ function init(){
       cache: false,
       dataType: 'json',
       contentType: "application/json; charset=utf-8",
-      error: function(err) { 
+      error: function(err) {
         debug('ajax error')
         debug(err)
       },
