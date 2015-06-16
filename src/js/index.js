@@ -23,8 +23,7 @@ require('./subscribe-form')(app)
 var Navigation = require('./navigation')
 
 domready(function(){
-  console.log('hello, pluto!')
   app.msgs.emit('ready')
-  var navigation = new Navigation()
-  navigation.init()
+  // var navigation = new Navigation()
+  // navigation.init()
 })
