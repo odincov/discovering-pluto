@@ -17,7 +17,7 @@ var gulp = require('gulp')
   , size = require('gulp-size')
   , merge = require('merge-stream')
 
-  , langs = ['ru','en']
+  , langs = ['en','ru']
 
 gulp.task('stylus', function () {
   return gulp.src('./src/stylus/main.styl')
@@ -74,7 +74,7 @@ gulp.task('iconify', function() {
 
 gulp.task('js', function(){
   return gulp.src('./src/js/index.js')
-    .pipe(webpack({ 
+    .pipe(webpack({
       output : { filename : 'index.js' },
       loaders: [
         { test: require.resolve('jquery'), loader: 'imports?jQuery=jquery' },
