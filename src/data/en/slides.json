@@ -1,41 +1,45 @@
 {
   "1848": {
-    "title": "Начало поисков",
+    "title": "The search begins",
     "date": "1848",
     "content": [
-      "Плутон был открыт не случайно. Первая половина XIX века была ознаменована триумфом небесной механики. По гравитационным возмущениям, которые испытывала планета Уран, астрономы смогли вычислить, а затем и открыть новую планету, Нептун. Впрочем, его существование не смогло до конца объяснить отклонения в движении Урана по орбите. Все указывало на присутствие планеты за орбитой Нептуна, которая оказывала влияние на Уран.",
-      "Воодушевленные открытием Нептуна «на кончике пера», астрономы принялись за поиски девятой планеты. Пока не на небе, а за письменным столом."
+      "Pluto was not discovered by accident. The first half of the 19th century was marked by the triumph of celestial mechanics. By observing the gravitational perturbations that affected the planet Uranus, astronomers were able to calculate and later discover a new planet, Neptune. However, Neptune’s existence couldn't fully explain the deviations in the motion of Uranus. Everything pointed to the presence of a planet beyond Neptune.",
+      "Inspired by the fact that Neptune was discovered through mathematical calculations, astronomers began to search for the ninth planet. Still not in the sky, but at the desk."
     ]
   },
 
   "1905": {
-    "title": "Первые предсказания",
+    "title": "First predictions",
     "date": "1905",
     "content": [
-      "Бостонский бизнесмен и астроном Персиваль Лоуэлл был одержим исследованием марсианских каналов и поиском планеты за орбитой Нептуна. Для этих целей он построил за свои деньги обсерваторию во Флагстаффе, штат Аризона.",
-      "В 1905 году Лоуэлл опубликовал первые правдоподобные расчеты орбиты гипотетической планеты и сделал предположения относительно ее массы."
+      "Boston businessman and astronomer Percival Lowell was obsessed with the study of Martian Canals and with the search for the planet beyond Neptune’s orbit. For this purpose he built an observatory in Flagstaff, Arizona, with his own money.",
+      "In 1905, Lowell published his first plausible estimates of the orbit of a hypothetical planet and made assumptions about it’s weight."
     ]
   },
 
   "1915": {
-    "title": "Планета «Икс»",
-    "date": "19 марта 1915 года",
+    "title": "Planet X",
+    "date": "March 19th, 1915",
     "content": [
-      "Лоуэлл назвал гипотетическую планету за Нептуном «планетой Икс». Ее систематические поиски во Флагстаффе начались в 1906 cгоду и продолжались — безуспешно — до самой смерти астронома в 1916 году.",
-      "Интересно, что в марте 1915 года Лоуэлл получил два снимка Плутона, но не смог отождествить его среди тысяч слабых звезд."
+      "Lowell named the hypothetical planet beyond Neptune \"Planet X.\" Systematic searches began in 1906 and continued, unsuccessfully, until the astronomer's death in 1916.",
+      "In fact, in 1915, Lowell did photograph Pluto in two images, but failed to identify it among the thousands of faint stars."
     ]
   },
 
   "1930-a": {
-    "title": "Открытие Плутона",
-    "date": "18 февраля 1930 года"
+    "title": "The discovery of Pluto",
+    "date": "February 18th, 1930",
+    "content": [
+      "Lowell’s work was continued by the young astronomer Clyde Tombaugh, who was invited to Flagstaff to continue the search for \"Planet X.\" On February 18th, 1930, after a year of hard work, Tombaugh discovered a faint moving object on photographic plates taken on January 23rd and 29th. Thus, after a few decades since the beginning of it’s search, a new planet in the Solar System was discovered."
+    ]
   },
 
   "1930-b": {
-    "title": "Мир узнаёт о существовании девятой планеты",
+    "title": "The world learns of the existence of the ninth planet",
     "date": "1930",
-    "content": [ 
-      "Сообщение об открытии было послано в Гарвардскую обсерваторию. Мир узнал о существовании 9-й планеты Солнечной системы 13 марта, в день 75-летия Лоуэлла."
+    "content": [
+      "News of the discovery was sent to the Harvard College Observatory, and on March 13th, on the day of Lowell’s 75th anniversary, the world learned of the existence of the 9th planet of the Solar System.",
+      "The right to name the new celestial body belonged to the Lowell Observatory. An international competition was announced, and from the whole world variants of the name started to come to the observatory. On March 24 newfound planet got its official name Pluto, named after the ruler of the underworld — one of  the gods of the Roman pantheon. The first person to propose this name for the ninth planet, was Venetia Burney, an 11-year-old schoolgirl from Oxford."
     ]
   },
 
@@ -149,7 +153,7 @@
     "date":  ""
   },
 
-  "2015": { 
+  "2015": {
     "title": "Новые горизонты",
     "date": "14 июля 2015 года",
     "content": [
