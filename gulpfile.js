@@ -1,4 +1,6 @@
 var gulp = require('gulp'),
+    jshint = require('gulp-jshint'),
+    jscs = require('gulp-jscs'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     webpack = require('gulp-webpack'),

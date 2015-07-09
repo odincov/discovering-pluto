@@ -1,0 +1,13 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "unused": true,
+  "boss": true,
+  "lastsemic": true,
+  "multistr": true,
+  "sub": true,
+  "noyield": true,
+  "loopfunc": true
+}
