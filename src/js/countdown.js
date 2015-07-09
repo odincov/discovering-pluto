@@ -1,25 +1,31 @@
 function calcage(secs, num1, num2, leadingZero) {
   var s = ((Math.floor(secs/num1))%num2).toString();
-  if (leadingZero && s.length < 2)
-    s = "0" + s
-  return s
+  if (leadingZero && s.length < 2) {
+    s = "0" + s;
+  }
+  return s;
 }
 
-function getCountdownTime(){
-  var currentUTC = new Date().getTime()
-  var targetUTC = Date.UTC(2015, 06, 14, 11, 49, 59)
-  var diff = (targetUTC - currentUTC)/1000
-  var days = calcage(diff,86400,100000)
-  var hours = calcage(diff,3600,24, true)
-  var minutes = calcage(diff,60,60, true)
-  var seconds = calcage(diff,1,60, true)
+function getCountdownTime() {
+  var data = {
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  };
 
-  return {
-    days: days,
-    hours: hours,
-    minutes: minutes,
-    seconds: seconds
+  var currentUTC = new Date().getTime();
+  var targetUTC = Date.UTC(2015, 06, 14, 11, 49, 59);
+  var diff = (targetUTC - currentUTC)/1000;
+
+  if (diff > 0) {
+    data.days = calcage(diff,86400,100000);
+    data.hours = calcage(diff,3600,24, true);
+    data.minutes = calcage(diff,60,60, true);
+    data.seconds = calcage(diff,1,60, true);
   }
+
+  return data;
 }
 
 function renderCountdown(elements,c){
