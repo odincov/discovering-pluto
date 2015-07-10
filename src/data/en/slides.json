@@ -1,4 +1,10 @@
 {
+  "intro": {
+    "content": [
+      "This is a story about the search, discovery and exploration of Pluto, a dwarf planet on the outskirts of the Solar System. Information about this enigmatic world has been gathered with great effort over many decades. The story begins in the 19th century..."
+    ]
+  },
+
   "1848": {
     "title": "The search begins",
     "date": "1848",

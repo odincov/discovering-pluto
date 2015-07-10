@@ -32,7 +32,7 @@ gulp.task('jade', function () {
   var tasks = langs.map(function (lang) {
     var dataPath = './src/data/'+lang
     var data = {
-      intro : require(dataPath+'/intro.json'),
+      cover : require(dataPath+'/cover.json'),
       slides : require(dataPath+'/slides.json'),
       subscribeView : require(dataPath+'/subscribe.json'),
       footer : require(dataPath+'/footer.json'),
