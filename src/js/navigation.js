@@ -52,7 +52,6 @@ Navigation.prototype.adjustOffsetPosition = function () {
     if( offset-height/2 <= wScrollTop && offset+height/2 >= wScrollTop) {
       if(height <= wHeight){
         debounce( that.controller.scrollTo(offset), 100);
-        console.log('blah');
       }
       that.$els.active = $(this);
       window.location.hash = $(this).attr('id').replace('block-','');
