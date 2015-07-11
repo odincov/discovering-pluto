@@ -2,8 +2,9 @@
   width 100%
   float left
   margin-bottom rem(30px)
+
 .timer__list
-  font-family $font--headlines--condenced
+  font-family $font--headings--condenced
   color $color--white
   margin 0 auto
   width 282px
@@ -11,28 +12,33 @@
     width 370px
   +media-query( $screen, $bp--desktop )
     width 550px
+
 .timer__unit-title
-  font-family $font--headlines--condenced 
-  font-size $milli-size
+  font-family $font--headings--condenced
+  font-size $size--femto
   text-transform uppercase
   letter-spacing rem(3px)
-  color $color--pale-white
+  color $color--light-gray
   margin-top rem(15px)
+
 .timer li
   float left
+
 .timer li span
   width 100%
   display block
+
 .timer__number
-  font-size $kilo-size
+  font-size $size--tera
   +media-query( $screen, $bp--tablet )
-    font-size $mega-size
+    font-size $size--peta
   +media-query( $screen, $bp--desktop )
-    font-size $sup-sup-giga-size
+    font-size $size--exa
+
 .timer__number--divider
-  font-size $beta-size
+  font-size $size--kilo
   +media-query( $screen, $bp--desktop )
-    font-size $mega-size
+    font-size $size--peta
   text-align center
   padding-left .25em
   padding-right .25em
@@ -41,8 +47,10 @@
     margin-top 13px
   +media-query( $screen, $bp--desktop )
     margin-top 16px
+
 .timer__number--seconds
   font-weight 100
+
 .timer__number--days,
 .timer__number--hours,
 .timer__number--minutes,

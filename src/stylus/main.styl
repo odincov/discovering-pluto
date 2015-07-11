@@ -5,29 +5,54 @@ box-sizing-reset()
 normalize()
 
 @import 'settings.styl'
-@import 'generic/vertical-centering.styl'
 
+// base styles
 @import 'base/main.styl'
 @import 'base/headings.styl'
 @import 'base/paragraphs.styl'
 @import 'base/hr.styl'
+@import 'base/icons.styl'
 
-@import 'objects/subscribe-view.styl'
-@import 'objects/footer.styl'
-@import 'objects/icon.styl'
-@import 'objects/slides-wrapper.styl'
-@import 'objects/cover.styl'
-@import 'objects/intro.styl'
-@import 'objects/slide.styl'
-@import 'objects/footer-links.styl'
-@import 'objects/credits-list.styl'
-@import 'objects/gratitudes-list.styl'
-@import 'objects/references-list.styl'
-@import 'objects/timer.styl'
-@import 'objects/social-networks.styl'
-@import 'objects/orbital-resonance.styl'
-@import 'objects/solar-system.styl'
-@import 'objects/orbits.styl'
-@import 'objects/pm-ratio.styl'
-@import 'objects/unstable-orbits.styl'
-@import 'objects/timeline.styl'
+// utilities styles
+@import 'utilities/vertical-centering.styl'
+
+// layouts styles
+@import 'layouts/wrapper.styl'
+@import 'layouts/slide.styl'
+@import 'layouts/cover.styl'
+@import 'layouts/intro.styl'
+@import 'layouts/1848.styl'
+@import 'layouts/1905.styl'
+@import 'layouts/1915.styl'
+@import 'layouts/1930-a.styl'
+@import 'layouts/1930-b.styl'
+@import 'layouts/1965.styl'
+@import 'layouts/1976.styl'
+@import 'layouts/1978.styl'
+@import 'layouts/1979.styl'
+@import 'layouts/1986.styl'
+@import 'layouts/1988-a.styl'
+@import 'layouts/1988-b.styl'
+@import 'layouts/1990.styl'
+@import 'layouts/1992.styl'
+@import 'layouts/2005.styl'
+@import 'layouts/2006-a.styl'
+@import 'layouts/2006-b.styl'
+@import 'layouts/2011-2012.styl'
+@import 'layouts/2015.styl'
+@import 'layouts/subscribe.styl'
+@import 'layouts/footer.styl'
+
+// components styles
+@import 'components/timeline.styl'            // timeline navigation
+@import 'components/orbital-resonance.styl'   // slide 1965 Pluto/Neptune orbital resonans
+@import 'components/orbits.styl'              // slide 1979 Pluto/Neptune orbits
+@import 'components/radius.styl'              // slide 1986 Pluto/Moon radius
+@import 'components/chaotic-orbits.styl'      // slide 1988-b
+@import 'components/solar-system.styl'        // solar sysyem model by @Dathink
+@import 'components/countdown-timer.styl'     // new horizons flyby countdown
+@import 'components/resources.styl'           // additional resources
+@import 'components/credits.styl'             // credits
+@import 'components/acknowledgements.styl'    // acknowledgements
+@import 'components/attributions.styl'        // used materials attributions
+@import 'components/social-networks.styl'     // links to social networks

@@ -5,42 +5,45 @@
   background-size cover
   background-position center
   position relative
+
 .subscribe__date
   margin 0 auto
   text-transform uppercase
-  font-size $milli-size
-  font-family $font--headlines
+  font-size $size--femto
+  font-family $font--headings
   letter-spacing rem(1px)
-  color $color--pale-white--dark
+  color $color--dark-gray
   +media-query( $screen, $bp--tablet )
     width 450px
   +media-query( $screen, $bp--desktop )
     width 535px
-    font-size $zeta-size
+    font-size $size--pico
+
 .subscribe__text
   margin 0 auto
-  font-size $zeta-size
-  color $color--pale-white--dark
+  font-size $size--pico
+  color $color--dark-gray
   +media-query( $screen, $bp--tablet )
     width 550px
   +media-query( $screen, $bp--desktop )
     width 650px
-    font-size $epsilon-size
+    font-size $size--nano
+
 .subscribe__input
   box-sizing border-box
   padding-left 1.25em
   padding-right 1.25em
   height 50px
-  font-size $zeta-size
+  font-size $size--pico
   line-height 50px
-  color $color--pale-white
+  color $color--light-gray
   background #212125
   border solid 1px #212125
   border-left solid 1px #27272b
   border-bottom solid 1px #29292d
   width 100%
   +placeholder()
-    font-size $milli-size
+    font-size $size--femto
     line-height 50px
     font-weight 100
     color #414346
@@ -50,10 +53,11 @@
     width 70%
     +placeholder()
       text-align left
+
 .subscribe__button
   width 100%
   height 50px
-  font-size $zeta-size
+  font-size $size--pico
   color #fefefe
   text-transform uppercase
   background-image linear-gradient( 180deg, #0e78d7,  #0a51c3)
@@ -65,6 +69,7 @@
   +media-query( $screen, $bp--tablet )
     width 30%
     margin-top auto
+
 .subscribe__form-group
   margin 2em 5%
   width 90%
@@ -73,6 +78,7 @@
     margin 2em auto
   +media-query( $screen, $bp--desktop )
     width 600px
+
 .subscribe__thank-you-wrapper
   display none
   margin 0 auto
@@ -80,16 +86,18 @@
     width 550px
   +media-query( $screen, $bp--desktop )
     width 650px
+
 .subscribe__thank-you-msg
-  font-size $zeta-size
-  color $color--pale-white--dark
+  font-size $size--pico
+  color $color--dark-gray
   +media-query( $screen, $bp--desktop )
-    font-size $epsilon-size
+    font-size $size--nano
   a
     color #0c73cb
     text-decoration none
+
 .subscribe__error
   display none
   color #F74242
   font-weight bold
-  font-size $milli-size
+  font-size $size--femto

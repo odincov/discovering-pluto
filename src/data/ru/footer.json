@@ -1,9 +1,9 @@
 {
-  "title": "Роли озвучивали...",
-  "links-title": "Ссылки на материалы",
+  "footer-title": "Роли озвучивали...",
+  "resources-title": "Ссылки на материалы",
   "credits-title": "«История исследования Плутона»",
-  "credits-sub-title": "Проект сайта <span>«Большая Вселенная»</span>",
-  "references-title": "Использованные материалы",
-  "gratitude": "Благодарность",
-  "copy-rights": "© Большая Вселенная 2011 — 2015 гг."
+  "credits-subtitle": "Проект сайта <span>«Большая Вселенная»</span>",
+  "attributions-title": "Использованные материалы",
+  "acknowledgements-title": "Благодарность",
+  "copyright-notice": "© Большая Вселенная 2011 — 2015 гг."
 }

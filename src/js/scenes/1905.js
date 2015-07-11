@@ -2,7 +2,7 @@ var ScrollScene = require('../../vendor/ScrollMagic/js/jquery.scrollmagic').Scen
 
 var timeline = new TimelineMax()
 timeline
-  .from('.slide__bg--1905', 1, { opacity: 0, scale: 1.25, ease: Expo.easeOut })
+  .from('.slide__background--1905', 1, { opacity: 0, scale: 1.25, ease: Expo.easeOut })
   .from('.slide--1905 h2', 0.5, { opacity: 0, x: 50 }, "-=0.5")
   .from('.slide--1905 p', 0.5, { opacity: 0, x: 50 })
 

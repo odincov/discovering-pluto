@@ -1,0 +1,67 @@
+.slide
+  position relative
+  overflow hidden
+  +media-query( $screen, $bp--tablet )
+    min-height 100%
+
+.slide__content
+  position relative
+  text-align left
+  z-index 100
+  padding 1em
+  float left
+  +media-query( $screen, $bp--tablet )
+    margin-left 5%
+    width 50%
+  +media-query( $screen, $bp--desktop )
+    width 40%
+  h2, p
+    color $color--black
+
+.slide__content--inverted
+  float right
+  margin-right 5%
+
+.slide__content--center
+  float none
+  margin-left auto
+  margin-right auto
+  +media-query( $screen, $bp--tablet )
+    padding 0
+    text-align center
+
+.slide__video,
+.slide__image,
+.slide__infographics
+  float left
+  width 100%
+  +media-query( $screen, $bp--tablet )
+    width 45%
+  +media-query( $screen, $bp--desktop )
+    width 55%
+
+.slide__background,
+.slide__background-front,
+.slide__background-middle,
+.slide__background-back
+  display none
+  +media-query( $screen, $bp--tablet )
+    display block
+  position absolute
+  left 0
+  top 0
+  size 100% 100%
+  background-position center
+  background-size cover
+
+.slide__background
+  z-index 10
+
+.slide__background-front
+  z-index 40
+
+.slide__background-middle
+  z-index 30
+
+.slide__background-back
+  z-index 20

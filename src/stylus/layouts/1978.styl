@@ -1,0 +1,22 @@
+.slide--1978
+  background-image url('../images/1978-pluton-charon-animation--inverted.gif')
+  background-repeat no-repeat
+  padding-bottom 300px
+  background-position bottom center
+  background-size 300px auto
+  .slide__image
+    size 100% 400px
+    +media-query( $screen, $bp--tablet )
+      size 45% 400px
+    +media-query( $screen, $bp--desktop )
+      size 55% 400px
+    border solid 1px red
+    background-size auto 100%
+    background-image url('../images/1978-pluton-charon-animation--inverted.gif')
+    background-repeat no-repeat
+    background-position center
+    background-color white
+  +media-query( $screen, $bp--desktop )
+    background-position 86% center
+    background-size 500px auto
+    padding-bottom 0px

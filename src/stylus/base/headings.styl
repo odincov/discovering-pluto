@@ -4,83 +4,56 @@ h3,
 h4,
 h5,
 h6,
-.headline, .heading
-  color $base-font-color
-  font-family $font--headlines
+.heading
+  color $base--font-color
+  font-family $font--headings
 
-.headline--xxl
+.heading--l
   text-transform uppercase
   font-weight 100
   letter-spacing 0.1em
-  font-size $beta-size
-  margin-bottom 0
-  +media-query( $screen, $bp--tablet )
-    font-size $kilo-size
-  +media-query( $screen, $bp--desktop )
-    font-size $mega-size
-
-.headline--xxl span
-  display block
-  font-weight 900
-  font-size $kilo-size
-  margin-top .15em
-  +media-query( $screen, $bp--tablet )
-    font-size $sup-sup-giga-size
-    margin-top 0
-  +media-query( $screen, $bp--tablet--landscape )
-    font-size $sup-giga-size
-  +media-query( $screen, $bp--desktop--medium )
-    margin-top auto
-    font-size $giga-size
-
-.headline--l
-  text-transform uppercase
-  font-weight 100
-  letter-spacing 0.1em
-  font-size $beta-size
+  font-size $size--kilo
   margin .75em 0
   +media-query( $screen, $bp--tablet )
-    font-size $kilo-size
+    font-size $size--tera
   +media-query( $screen, $bp--desktop )
-    font-size $mega-size
+    font-size $size--peta
 
-.headline--slide
-  text-transform uppercase
-  font-weight 400
-  letter-spacing 0.1em
-  font-size $beta-size
+.heading--slide
   margin .25em 0
+  font-size $size--kilo
+  font-weight $weight--light
+  letter-spacing 0.1em
   +media-query( $screen, $bp--tablet )
-    font-size $sup-kilo-size
+    font-size $size--giga
   +media-query( $screen, $bp--desktop )
-    font-size $kilo-size
+    font-size $size--tera
 
-
-.headline--m
+.heading--m
   text-transform uppercase
   font-weight 100
   letter-spacing 0.1em
-  font-size $gamma-size
+  font-size $size--deci
   margin .75em 0
   +media-query( $screen, $bp--tablet )
-    font-size $beta-size
+    font-size $size--kilo
   +media-query( $screen, $bp--desktop )
-    font-size $alpha-size
+    font-size $size--mega
 
-.headline--xs
+.heading--xs
   font-family $font--main
   color $base-font-color
-  font-size $epsilon-size
+  font-size $size--nano
   margin-top 1em
   +media-query( $screen, $bp-desktop )
-    font-size $epsilon-size
-.headline--pale-white--dark
-  color $color--pale-white--dark
+    font-size $size--nano
+.heading--pale-white--dark
+  color $color--dark-gray
   span
-    color $color--pale-white
+    color $color--light-gray
 
 .heading--subscribe-title
-  font-family $font--headlines--condenced
+  font-family $font--headings--condenced
   font-weight $light
   font-size rem(20px)
   letter-spacing rem(3px)

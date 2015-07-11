@@ -1,0 +1,32 @@
+.cover
+  min-height 100%
+  background-image url('../images/cover.jpg')
+  background-size cover
+  background-position center
+  position relative
+
+.cover__title
+  font-family $font--headings--regular
+  font-weight $weight--thin
+  font-size $size--kilo
+  letter-spacing rem(5px)
+  text-transform uppercase
+  margin-bottom 0
+  +media-query( $screen, $bp--tablet )
+    font-size $size--tera
+  +media-query( $screen, $bp--desktop )
+    font-size $size--peta
+
+.cover__title strong
+  display block
+  margin-top .15em
+  font-size $size--tera
+  font-weight $weight--black
+  +media-query( $screen, $bp--tablet )
+    margin-top 0
+    font-size $size--exa
+  +media-query( $screen, $bp--tablet--landscape )
+    font-size $size--zetta
+  +media-query( $screen, $bp--desktop--medium )
+    margin-top auto
+    font-size $size--yotta

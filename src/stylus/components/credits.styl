@@ -1,27 +1,29 @@
-.credits-list
+.credits
   width 100%
   font-family $font--main
   line-height 2
-  font-size $epsilon-size
-  color $color--pale-white
+  font-size $size--nano
+  color $color--light-gray
   padding 2.75em 0
   display block
   float left
-.credits-list dt,
-.credits-list dl
+
+.credits dt,
+.credits dl
   width 100%
-  text-align center 
+  text-align center
   +media-query( $screen, $bp--tablet )
     width 50%
   float left
   padding 0 0.5em
 
-.credits-list dt 
+.credits dt
   +media-query( $screen, $bp--tablet )
     text-align right
-  color $color--pale-white--dark
-.credits-list dl 
-  font-family $font--headlines
+  color $color--dark-gray
+
+.credits dl
+  font-family $font--headings
   line-height 2.2em
   +media-query( $screen, $bp--tablet )
     text-align left
