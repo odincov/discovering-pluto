@@ -11,7 +11,7 @@ If you would like to add translation to another language you are welcome to do s
 
 ## Requirements
 
-Git and NodeJS
+NodeJS, bower
 
 ## Installation
 
@@ -27,30 +27,6 @@ Use `gulp go` to run a server which will watch for any changes in files and rebu
 
 To build website simply run `npm run build`.
 
-## Deploy
-
-Setup ftp-config.js file in the project's root directory using this as a template:
-
-```
-module.exports = {
-  en: {
-    host: '',
-    user: '',
-    pass: '',
-    remotePath: ''
-  },
-  ru: {
-    host: '',
-    user: '',
-    pass: '',
-    remotePath: ''
-  }
-}
-```
-
-Run `npm run upload` to upload files to your server. To push a specific language only, use gulp task: `gulp upload --lang en`.
-
-
 ## Contribute translation
 
 To contribute translation follow these steps:
@@ -61,12 +37,8 @@ To contribute translation follow these steps:
 4. Translate text in all files in that directory
 5. Make a pull request
 
- 
 ## Todo
 
 * Better project description
 * Add repository usage description
-* Add CHANGELOG.md
 * Add an instruction for contributing to the project to README.md
-* Add an instruction for private usage of the repository to README.md
-
