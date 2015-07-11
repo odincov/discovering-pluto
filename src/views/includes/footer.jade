@@ -1,37 +1,37 @@
-footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer['title'])
+footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer['footer-title'])
   .u-cetner
-    if links
-      h2.headline--m= footer['links-title']
+    if resources
+      h2.heading--m= footer['resources-title']
       
-      ul.footer-links
-        for link in links
+      ul.resources
+        for resource in resources
           li
-            a(href= link[1] target='blank')= link[0]
+            a(href= resource[1] target='blank')= resource[0]
 
     hr
     
     if credits
-      h2.headline--m= footer['credits-title']
-      h4.headline--xs.headline--pale-white--dark!= footer['credits-sub-title']
+      h2.heading--m= footer['credits-title']
+      h4.heading--xs.heading--pale-white--dark!= footer['credits-subtitle']
       
-      dl.credits-list
+      dl.credits
         for credit in credits
           dt= credit[0]
           dl= credit[1]
     
-    if gratitudes
-      h4.headline--xs.headline--pale-white--dark= footer['gratitude']
-      ul.gratitudes-list
-        for gratitude in gratitudes
-          li= gratitude
+    if acknowledgements
+      h4.heading--xs.heading--pale-white--dark= footer['acknowledgements-title']
+      ul.acknowledgements
+        for acknowledgement in acknowledgements
+          li= acknowledgement
 
-    if references
-      h4.headline--xs.headline--pale-white--dark= footer['references-title']
+    if attributions
+      h4.heading--xs.heading--pale-white--dark= footer['attributions-title']
       
-      dl.references-list
-        for reference in references
-          dt= reference[0] 
-          dl  / #{reference[1]}. 
+      dl.attributions
+        for attribution in attributions
+          dt= attribution[0] 
+          dl  / #{attribution[1]}. 
     
     ul.social-networks
       li
@@ -41,4 +41,4 @@ footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer[
       li
         a.icon.icon-facebook(href='https://www.facebook.com/biguniverse.ru' target='_blank')
 
-    p.footer__copy= footer['copy-rights']
+    p.footer__copyright-notice= footer['copyright-notice']

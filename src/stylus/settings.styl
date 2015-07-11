@@ -8,10 +8,11 @@
 // 2. COLOURS
 // 3. TYPEFACES
 // 4. FONT SIZES
-// 5. BASE STYLES
-// 6. GRID
-// 7. DEBUG STYLING
-// 8. DEFAULT ENVIRONMENT
+// 5. FONT WEIGHTS
+// 6. BASE STYLES
+// 7. GRID
+// 8. DEBUG STYLING
+// 9. DEFAULT ENVIRONMENT
 //
 
 //
@@ -19,20 +20,20 @@
 // Setup standard widths to pass to media queries
 //
 
-$bp--mobile--portrait  = min-width 0px
-// $bp--mobile--landscape = min-width 400px
-$bp--mobile--landscape = min-width 450px
-// $bp--tablet--portrait  = min-width 550px
-$bp--tablet--portrait  = min-width 675px
-$bp--tablet--landscape = min-width 767px
-$bp--desktop--small    = min-width 1024px
-$bp--desktop--medium   = min-width 1280px
-$bp--desktop--large    = min-width 1600px
+$bp--mobile--portrait    = min-width 0px
+$bp--mobile--landscape   = min-width 400px
+$bp--mobile--landscape   = min-width 450px
+$bp--tablet--portrait    = min-width 550px
+$bp--tablet--portrait    = min-width 675px
+$bp--tablet--landscape   = min-width 767px
+$bp--desktop--small      = min-width 1024px
+$bp--desktop--medium     = min-width 1280px
+$bp--desktop--large      = min-width 1600px
 
 // Common aliases
-$bp--mobile  = $bp--mobile--portrait
-$bp--tablet  = $bp--tablet--portrait
-$bp--desktop = $bp--desktop--small
+$bp--mobile              = $bp--mobile--portrait
+$bp--tablet              = $bp--tablet--portrait
+$bp--desktop             = $bp--desktop--small
 
 $screen = only screen
 
@@ -40,81 +41,87 @@ $screen = only screen
 // 2. COLOURS
 //
 
-$color--red = #e9424e
-$color--dark = #2d2f30
-$color--black = #333333
-$color--white = #ffffff
-$color--pale-white = #788490
-$color--pale-white--dark = #5a6169
-$color--dark-blue = #01050c
-$color--deep-blue = #002432
+$color--white            = #ffffff
+$color--black            = #000000
+
+$color--light-gray       = #788490
+$color--dark-gray        = #5a6169
+
+$color--dark-blue        = #01050c
+$color--space-blue       = #002432
+$color--red              = #e9424e
 
 //
 // 3. TYPEFACES
 //
 
-$font--main = 'Open Sans'
-$font--headlines = 'Proxima Nova W10'
-$font--headlines--condenced = 'Proxima Nova W01'
+$font--main                 = 'Open Sans', font-stack( "Helvetica" )
+$font--headings             = $font--headings--condenced, $font--main
+$font--headings--regular    = 'Proxima Nova W10'
+$font--headings--condenced  = 'Proxima Nova W01'
 
 //
 // 4. FONT SIZES
 //
 
-$giga-size = rem(230px)
-$sup-giga-size = rem(160px)
-$sup-sup-giga-size = rem(105px)
-$mega-size = rem(61px)
-$kilo-size = rem(50px)
-$sup-kilo-size = rem(40px)
+// Extra large
+$size--yotta             = rem(230px)
+$size--zetta             = rem(160px)
+$size--exa               = rem(105px)
+$size--peta              = rem(60px)
+$size--tera              = rem(50px)
+$size--giga              = rem(40px)
+$size--mega              = rem(36px)
+$size--kilo              = rem(30px)
 
-$alpha-size = rem(36px)
-$beta-size = rem(30px)
-$gamma-size = rem(24px)
-$delta-size = rem(18px)
-$epsilon-size = rem(16px)
-$zeta-size = rem(14px)
+// Basic
+$size--hecto             = rem(28px)
+$size--deca              = rem(26px)
+$size--deci              = rem(24px)
+$size--centi             = rem(22px)
+$size--milli             = rem(20px)
+$size--micro             = rem(18px)
+$size--nano              = rem(16px)
+$size--pico              = rem(14px)
 
-$milli-size = rem(12px)
-$micro-size = rem(10px)
-
-//
-// 5. BASE STYLES
-//
-
-$base--font-heading = $font--main
-$base--font-body    = $font--main
-$base--font-color   = $color--black
-$base--font-size    = $zeta-size
-$base--line-height  = 1.6
-$base--spacing      = ($base--line-height)em
-$base--body-bg      = $color--white
-$base--brand-bg     = $color--red
-
-$base-font-size = $zeta-size
-$base-line-height = $gamma-size
-$base-font-color = white
-$base-font-family = sans-serif
+// Extra small
+$size--femto             = rem(12px)
+$size--atto              = rem(10px)
+$size--zepto             = rem(8px)
+$size--yocto             = rem(6px)
 
 //
-// FONT WEIGHTS
+// 5. FONT WEIGHTS
 //
 
-$thin            = 100
-$light           = 300
-$regular         = 400
-$medium          = 500
-$semibold        = 600
-$bold            = 700
-$extrabold       = 800
-$black           = 900
+$weight--thin            = 100
+$weight--light           = 300
+$weight--regular         = 400
+$weight--medium          = 500
+$weight--semibold        = 600
+$weight--bold            = 700
+$weight--extrabold       = 800
+$weight--black           = 900
 
 //
-// 6. GRID
+// 6. BASE STYLES
+//
+
+$base--font-heading      = $font--headings
+$base--font-body         = $font--main
+$base--font-color        = $color--white
+$base--font-size         = $size--pico
+$base--line-height       = 1.6
+$base--spacing           = ($base--line-height)em
+$base--margin            = $size--deci
+$base--body-bg           = $color--space-blue
+
+//
+// 7. GRID
 //
 
 //
-// 7. DEBUG STYLING
+// 8. DEBUG STYLING
 //
 
 $debug--mode = false

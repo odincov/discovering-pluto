@@ -1,4 +1,4 @@
-.pm-ratio
+.radius
   position relative
   size 100% 350px
   // border solid 1px red
@@ -25,11 +25,14 @@
     float left
     padding 0 .5em
     margin 0
-.pm-ratio__pluto
+
+.radius__pluto
   width 40%
-.pm-ratio__moon
+
+.radius__moon
   width 60%
-.pm-ratio__solid
+
+.radius__solid
   float left
   size 100% 225px
   +media-query( $screen, $bp--mobile--landscape )
@@ -42,28 +45,33 @@
     size 100% 400px
   background-position bottom center
   background-repeat no-repeat
-.pm-ratio__solid--pluto
+
+.radius__solid--pluto
   background-image url('../images/1986-pluto--paint-effect.png')
   background-size 100% auto
-.pm-ratio__solid--moon
+
+.radius__solid--moon
   background-image url('../images/1986-moon--paint-effect.png')
   background-size 100% auto
-.pm-ratio__numbers
+
+.radius__numbers
   float left
   width 100%
   text-align center
   padding-top 2em
-  font-size $zeta-size
+  font-size $size--pico
   +media-query( $screen, $bp--desktop )
-    font-size $delta-size
+    font-size $size--micro
   font-family $font--main
-  span 
+  span
     padding 2em 0 .5em
-.pm-ratio__numbers--pluto 
+
+.radius__numbers--pluto
   color #c8af60
   span
     border-bottom 10px solid #c8af60
-.pm-ratio__numbers--moon
+
+.radius__numbers--moon
   color #acb4b0
   span
     border-bottom 10px solid #acb4b0

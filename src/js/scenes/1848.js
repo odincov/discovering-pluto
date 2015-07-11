@@ -3,7 +3,7 @@ var ScrollScene = require('../../vendor/ScrollMagic/js/jquery.scrollmagic').Scen
 var scene = new ScrollScene({ 
   triggerElement : '.slide--1848' 
 })
-.setTween(TweenMax.from('.slide__bg--1848', .5, { 
+.setTween(TweenMax.from('.slide__background--1848', .5, { 
   opacity: 0 
 }))
 

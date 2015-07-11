@@ -1,6 +1,6 @@
 #block-mission-countdown.subscribe-view.u-centering-wrapper.js-nav-block(data-title= subscribeView['title'])
   .u-centered
-    h2.headline--l!= subscribeView['title']
+    h2.heading--l!= subscribeView['title']
     .timer
       ul.timer__list
         li
@@ -34,6 +34,6 @@
       p.subscribe__error.subscribe__error--email-exists= subscribeView['error-email-exists']
       p.subscribe__error.subscribe__error--other= subscribeView['error-other']
     .subscribe__thank-you-wrapper
-      h4.headline.headline--m= subscribeView['thanks-title']
+      h4.heading.heading--m= subscribeView['thanks-title']
       p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][0]
       //p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][1]

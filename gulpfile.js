@@ -36,10 +36,10 @@ gulp.task('jade', function () {
       slides : require(dataPath+'/slides.json'),
       subscribeView : require(dataPath+'/subscribe.json'),
       footer : require(dataPath+'/footer.json'),
-      links : require(dataPath+'/links.json'),
+      resources : require(dataPath+'/resources.json'),
       credits : require(dataPath+'/credits.json'),
-      references : require(dataPath+'/references.json'),
-      gratitudes : require(dataPath+'/gratitudes.json')
+      attributions : require(dataPath+'/attributions.json'),
+      acknowledgements : require(dataPath+'/acknowledgements.json')
     };
     return gulp.src('./src/views/pages/*.jade')
       .pipe(jade({locals: data}))

@@ -1,11 +1,13 @@
 p
-  font-family $font--main
-  color $base-font-color
-  line-height 1.6em
-  font-size $epsilon-size
   margin 1.5em 0
+  font-family $font--main
+  font-size $size--nano
+  font-weight $weight--thin
+  line-height 1.6
+  color $base-font-color
   +media-query( $screen, $bp--desktop )
-    font-size $delta-size
+    font-size $size--micro
+
 p.date
   margin-top 0
   +media-query( $screen, $bp--tablet )

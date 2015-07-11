@@ -1,0 +1,16 @@
+.slide--1990
+  background black
+  h2, p
+    color white
+  .slide__video
+    video
+      height auto
+      width 100%
+      +media-query( $screen, $bp--tablet )
+        position absolute
+        top 50%
+        right 0
+        transform translateY(-50%)
+        width 50%
+      +media-query( $screen, $bp--desktop )
+        width 50%
