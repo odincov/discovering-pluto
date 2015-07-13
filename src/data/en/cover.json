@@ -2,5 +2,7 @@
   "title": [
     "History of<br>the discovery of",
     "Pluto"
-  ]
+  ],
+  "ui-hint": "Scroll or hit spacebar to go to the next slide",
+  "scroll-icon-text": "Scroll down or hit spacebar"
 }

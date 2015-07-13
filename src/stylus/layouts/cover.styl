@@ -1,21 +1,24 @@
 .cover
   min-height 100%
-  background-image url('../images/cover.jpg')
+  background-image url('../images/cover-background.jpg')
   background-size cover
   background-position center
   position relative
 
 .cover__title
+  position relative
   font-family $font--headings--regular
   font-weight $weight--thin
   font-size $size--kilo
   letter-spacing rem(5px)
   text-transform uppercase
   margin-bottom 0
+  margin-top 20%
   +media-query( $screen, $bp--tablet )
     font-size $size--tera
   +media-query( $screen, $bp--desktop )
     font-size $size--peta
+  z-index 100
 
 .cover__title strong
   display block
@@ -30,3 +33,80 @@
   +media-query( $screen, $bp--desktop--medium )
     margin-top auto
     font-size $size--yotta
+
+.cover__ui-hint
+  font-size $size--nano
+  font-style italic
+  letter-spacing rem(1px)
+  color $color--light-gray
+
+.clyde-tombaugh
+  size 100% 885px
+  background-size auto 100%
+  background-position 180px -150px
+  background-repeat no-repeat
+  background-image url('../images/cover-clyde-tombaugh.png')
+  z-index 80
+
+.alan-stern
+  margin-top 22%
+  size 100% 423px
+  background-size auto 100%
+  background-position 87% 100%
+  background-repeat no-repeat
+  background-image url('../images/cover-alan-stern.png')
+  z-index 70
+
+.percival-lowell
+  margin-top 22%
+  size 100% 497px
+  background-size auto 100%
+  background-position 17% 100%
+  background-repeat no-repeat
+  background-image url('../images/cover-percival-lowell.png')
+  z-index 60
+
+.new-horizons
+  margin-top 7%
+  size 100% 226px
+  background-size auto 100%
+  background-position 74% 100%
+  background-repeat no-repeat
+  background-image url('../images/cover-new-horizons.png')
+  z-index 50
+
+.pluto
+  margin-top 4%
+  size 100% 68px
+  background-size auto 100%
+  background-position 64.5% 100%
+  background-repeat no-repeat
+  background-image url('../images/cover-pluto.png')
+  z-index 40
+
+.charon
+  margin-top 4.3%
+  size 100% 18px
+  background-size auto 100%
+  background-position 59.5% 100%
+  background-repeat no-repeat
+  background-image url('../images/cover-charon.png')
+  z-index 30
+
+.lense-flare
+  margin-top -400px
+  size 100% 1565px
+  background-size auto 100%
+  //background-position 50% 200px
+  background-repeat no-repeat
+  background-image url('../images/lense-flare.png')
+  z-index 20
+    
+.vortex
+  margin-top 9%
+  size 100% 746px
+  background-size auto 100%
+  //background-position 50% 200px
+  background-repeat no-repeat
+  background-image url('../images/cover-vortex.png')
+  z-index 10
