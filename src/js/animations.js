@@ -8,10 +8,10 @@ internals.init = function(app){
   var controller = new ScrollMagic() 
   controller.addScene([
     // require('./scenes/timeline'),
-    require('./scenes/1848'),
-    require('./scenes/1905'),
-    require('./scenes/1915'),
-    require('./scenes/2006-b')
+    // require('./scenes/1848'),
+    // require('./scenes/1905'),
+    // require('./scenes/1915'),
+    // require('./scenes/2006-b')
   ])
 }
 

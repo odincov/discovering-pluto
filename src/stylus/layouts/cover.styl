@@ -1,9 +1,9 @@
 .cover
+  position relative
   min-height 100%
   background-image url('../images/cover-background.jpg')
   background-size cover
   background-position center
-  position relative
 
 .cover__title
   position relative
@@ -39,74 +39,80 @@
   font-style italic
   letter-spacing rem(1px)
   color $color--light-gray
+  border solid 1px red
 
-.clyde-tombaugh
-  size 100% 885px
-  background-size auto 100%
-  background-position 180px -150px
-  background-repeat no-repeat
+.cover__layer
+  position absolute
+
+.cover__layer--tombaugh
+  size 931px 885px
   background-image url('../images/cover-clyde-tombaugh.png')
   z-index 80
+  left 50%
+  margin-left -605px
+  top 50%
+  margin-top -644px
 
-.alan-stern
-  margin-top 22%
-  size 100% 423px
-  background-size auto 100%
-  background-position 87% 100%
-  background-repeat no-repeat
-  background-image url('../images/cover-alan-stern.png')
-  z-index 70
-
-.percival-lowell
-  margin-top 22%
-  size 100% 497px
-  background-size auto 100%
-  background-position 17% 100%
-  background-repeat no-repeat
+.cover__layer--lowell
+  size 405px 497px
   background-image url('../images/cover-percival-lowell.png')
   z-index 60
+  top 50%
+  margin-top -200px
+  left 50%
+  margin-left -600px
 
-.new-horizons
-  margin-top 7%
-  size 100% 226px
-  background-size auto 100%
-  background-position 74% 100%
-  background-repeat no-repeat
+.cover__layer--stern
+  size 367px 423px
+  background-image url('../images/cover-alan-stern.png')
+  z-index 70
+  top 50%
+  left 50%
+  margin-top -200px
+  margin-left 250px
+
+.cover__layer--new-horizons
+  size 183px 226px
   background-image url('../images/cover-new-horizons.png')
   z-index 50
+  top 50%
+  left 50%
+  margin-top -450px
+  margin-left 240px
 
-.pluto
-  margin-top 4%
-  size 100% 68px
-  background-size auto 100%
-  background-position 64.5% 100%
-  background-repeat no-repeat
+.cover__layer--pluto
+  size 68px 68px
   background-image url('../images/cover-pluto.png')
   z-index 40
+  top 50%
+  left 50%
+  margin-top -500px
+  margin-left 200px
 
-.charon
-  margin-top 4.3%
-  size 100% 18px
-  background-size auto 100%
-  background-position 59.5% 100%
-  background-repeat no-repeat
+.cover__layer--charon
+  size 18px 18px
   background-image url('../images/cover-charon.png')
   z-index 30
+  top 50%
+  left 50%
+  margin-top -500px
+  margin-left 150px
 
-.lense-flare
-  margin-top -400px
-  size 100% 1565px
-  background-size auto 100%
-  //background-position 50% 200px
-  background-repeat no-repeat
+.cover__layer--lense-flare
+  size 1365px 1565px
   background-image url('../images/lense-flare.png')
   z-index 20
-    
-.vortex
-  margin-top 9%
-  size 100% 746px
-  background-size auto 100%
-  //background-position 50% 200px
+  top 50%
+  left 50%
+  margin-left -700px
+  margin-top -700px
+
+.cover__layer--vortex
+  size 100% 100%
+  top 0
+  left 0
+  background-size 700px auto
+  background-position center
   background-repeat no-repeat
   background-image url('../images/cover-vortex.png')
   z-index 10

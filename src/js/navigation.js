@@ -115,7 +115,7 @@ Navigation.prototype.setDocumentTitle = function (title) {
 }
 
 Navigation.prototype.handleKeys = function (e) {
-  var direction = 'down';
+  var direction = false;
 
   if (e.which == 40 || e.which == 39 || e.which == 32) {
     e.preventDefault();
@@ -125,9 +125,11 @@ Navigation.prototype.handleKeys = function (e) {
     direction = 'prev';
   }
 
-  var $next = this.getNext(direction);
-  var offset = $next.offset().top;
-  this.controller.scrollTo(offset);
+  if (direction) {
+    var $next = this.getNext(direction);
+    var offset = $next.offset().top;
+    this.controller.scrollTo(offset);
+  }
 }
 
 Navigation.prototype.init = function (){
