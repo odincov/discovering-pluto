@@ -1,5 +1,6 @@
 .cover
   position relative
+  overflow hidden
   min-height 100%
   background-image url('../images/cover-background.jpg')
   background-size cover
@@ -35,11 +36,12 @@
     font-size $size--yotta
 
 .cover__ui-hint
+  position relative
   font-size $size--nano
   font-style italic
   letter-spacing rem(1px)
   color $color--light-gray
-  border solid 1px red
+  z-index 1000
 
 .cover__layer
   position absolute
