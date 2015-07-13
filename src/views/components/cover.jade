@@ -1,15 +1,16 @@
 header#block-cover.js-nav-block.js-nav-block-active.cover.u-centering-wrapper(data-title= cover['title'][0])
+  .stars-background
+  .stars-background__twinkling
   .u-centered
     h1.heading.cover__title!= cover['title'][0]
       strong= cover['title'][1]
     p.cover__ui-hint!= cover['ui-hint']
-  .slide__background.clyde-tombaugh
-  .slide__background.alan-stern
-  .slide__background.percival-lowell
-  .slide__background.new-horizons
-  .slide__background.pluto
-  .slide__background.charon
-  .slide__background.charon
-  .slide__background.lense-flare
-  .slide__background.vortex
+  .cover__layer.cover__layer--tombaugh
+  .cover__layer.cover__layer--stern
+  .cover__layer.cover__layer--lowell
+  .cover__layer.cover__layer--new-horizons
+  .cover__layer.cover__layer--pluto
+  .cover__layer.cover__layer--charon
+  .cover__layer.cover__layer--lense-flare
+  .cover__layer.cover__layer--vortex
   a.icon.icon-scroll-indicator(href='#')= cover['ui-hint']
