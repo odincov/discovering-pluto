@@ -18,7 +18,6 @@ require('./lib/window-controller')(app)
 require('./lib/dimensions-controller')(app)
 
 require('./animations')(app)
-require('./countdown')(app)
 require('./subscribe-form')(app)
 var Navigation = require('./navigation')
 

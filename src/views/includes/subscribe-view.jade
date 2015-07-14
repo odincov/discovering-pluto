@@ -1,28 +1,5 @@
 #block-mission-countdown.subscribe-view.u-centering-wrapper.js-nav-block(data-title= subscribeView['title'])
   .u-centered
-    h2.heading.heading--l!= subscribeView['title']
-    .timer
-      ul.timer__list
-        li
-          span.timer__number.timer__number--days
-          span.timer__unit-title= subscribeView['counter']['day']
-        li
-          span.timer__number.timer__number--divider : 
-        li
-          span.timer__number.timer__number--hours
-          span.timer__unit-title= subscribeView['counter']['hours']
-        li
-          span.timer__number.timer__number--divider : 
-        li
-          span.timer__number.timer__number--minutes
-          span.timer__unit-title= subscribeView['counter']['minutes']
-        li
-          span.timer__number.timer__number--divider : 
-        li
-          span.timer__number.timer__number--seconds
-          span.timer__unit-title= subscribeView['counter']['seconds']
-    p.subscribe__date!= subscribeView['content']
-    hr
     .subscribe__form-wrapper
       h3.heading.heading--subscribe-title= subscribeView['invitation-title']
       p.subscribe__text!= subscribeView['invitation']

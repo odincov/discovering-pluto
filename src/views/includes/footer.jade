@@ -1,38 +1,37 @@
 footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer['footer-title'])
-  .u-cetner
+  .u-centered
     if resources
       h2.heading--m= footer['resources-title']
-      
+
       ul.resources
         for resource in resources
           li
             a(href= resource[1] target='blank')= resource[0]
-    
-    hr
-    
+
+
     if credits
       h2.heading--m= footer['credits-title']
       h4.heading--xs.heading--pale-white--dark!= footer['credits-subtitle']
-      
+
       dl.credits
         for credit in credits
           dt= credit[0]
           dl= credit[1]
-    
+
     if acknowledgements
       h4.heading--xs.heading--pale-white--dark= footer['acknowledgements-title']
       ul.acknowledgements
         for acknowledgement in acknowledgements
           li= acknowledgement
-    
+
     if attributions
       h4.heading--xs.heading--pale-white--dark= footer['attributions-title']
-      
+
       dl.attributions
         for attribution in attributions
           dt= attribution[0] 
           dl  / #{attribution[1]}. 
-    
+
     ul.social-networks
       li
         a.icon.icon-vk(href='http://vk.com/biguniverse' target='_blank') 
