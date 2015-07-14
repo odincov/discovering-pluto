@@ -3,6 +3,10 @@
     "History of<br>the discovery of",
     "Pluto"
   ],
+  "coming-soon-msg": [
+    "Coming Soon",
+    "In celebration of the “New Horizons” Pluto flyby, we created this site<br>to explore the fascinating history of Pluto’s discovery. It will be live soon –  after just a few more final tweaks! Sign up below to receive an announcement of the launch! "
+  ],
   "ui-hint": "Scroll or hit spacebar to go to the next slide",
   "scroll-icon-text": "Scroll down or hit spacebar"
 }

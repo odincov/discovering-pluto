@@ -2,7 +2,8 @@
   position relative
   overflow hidden
   min-height 100%
-  background-image url('../images/cover-background.jpg')
+  //background-image url('../images/cover-background.jpg')
+  background-color #010825
   background-size cover
   background-position center
 
@@ -34,6 +35,30 @@
   +media-query( $screen, $bp--desktop--medium )
     margin-top auto
     font-size $size--yotta
+
+.cover__coming-soon
+  position relative
+  margin-top rem(-5px)
+  font-family $font--headings--regular
+  font-weight $weight--light
+  font-size $size--milli
+  text-transform uppercase
+  letter-spacing rem(10px)
+  color $color--white
+  z-index 90
+
+.cover__coming-soon span
+  display block
+  margin-left auto
+  margin-right auto
+  margin-top rem(10px)
+  width rem(600px)
+  //font-family $font--headings--regular
+  font-size $size--nano
+  line-height 1.25
+  letter-spacing rem(2px)
+  text-transform none
+  color $color--light-gray
 
 .cover__ui-hint
   position relative
@@ -117,4 +142,14 @@
   background-position center
   background-repeat no-repeat
   background-image url('../images/cover-vortex.png')
+  z-index 10
+
+.cover__layer--glow
+  size 100% 100%
+  top 0
+  left 0
+  background-size 1600 auto
+  background-position center
+  background-repeat no-repeat
+  background-image url('../images/cover-glow.png')
   z-index 10
