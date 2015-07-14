@@ -1,5 +1,19 @@
 header#block-cover.js-nav-block.js-nav-block-active.cover.u-centering-wrapper(data-title= cover['title'][0])
+  .stars-background
+  .stars-background__twinkling
   .u-centered
     h1.heading.cover__title!= cover['title'][0]
       strong= cover['title'][1]
-  a.icon.icon-scroll-indicator(href='#') Scroll Down
+    //p.cover__ui-hint!= cover['ui-hint']
+    p.cover__coming-soon!= cover['coming-soon-msg'][0]
+      span!= cover['coming-soon-msg'][1]
+  .cover__layer.cover__layer--tombaugh
+  .cover__layer.cover__layer--stern
+  .cover__layer.cover__layer--lowell
+  .cover__layer.cover__layer--new-horizons
+  .cover__layer.cover__layer--pluto
+  .cover__layer.cover__layer--charon
+  .cover__layer.cover__layer--lense-flare
+  .cover__layer.cover__layer--vortex
+  .cover__layer.cover__layer--glow
+  span.icon.icon-scroll-indicator

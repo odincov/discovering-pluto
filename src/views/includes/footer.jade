@@ -7,7 +7,7 @@ footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer[
         for resource in resources
           li
             a(href= resource[1] target='blank')= resource[0]
-
+    
     hr
     
     if credits
@@ -24,7 +24,7 @@ footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer[
       ul.acknowledgements
         for acknowledgement in acknowledgements
           li= acknowledgement
-
+    
     if attributions
       h4.heading--xs.heading--pale-white--dark= footer['attributions-title']
       
@@ -37,8 +37,8 @@ footer#block-credits.footer.u-centering-wrapper.js-nav-block(data-title= footer[
       li
         a.icon.icon-vk(href='http://vk.com/biguniverse' target='_blank') 
       li
-        a.icon.icon-twitter(href='https://twitter.com/biguniverse_ru' target='_blank')
+        a.icon.icon-twitter(href='https://twitter.com/PlutoHistory' target='_blank')
       li
         a.icon.icon-facebook(href='https://www.facebook.com/biguniverse.ru' target='_blank')
 
-    p.footer__copyright-notice= footer['copyright-notice']
+    p.footer__copyright-notice!= footer['copyright-notice']

@@ -4,7 +4,6 @@
   margin-bottom rem(30px)
 
 .timer__list
-  font-family $font--headings--condenced
   color $color--white
   margin 0 auto
   width 282px
@@ -14,7 +13,7 @@
     width 550px
 
 .timer__unit-title
-  font-family $font--headings--condenced
+  font-family $font--headings
   font-size $size--femto
   text-transform uppercase
   letter-spacing rem(3px)
@@ -29,6 +28,7 @@
   display block
 
 .timer__number
+  font-family $font--headings--extra-condenced
   font-size $size--tera
   +media-query( $screen, $bp--tablet )
     font-size $size--peta
