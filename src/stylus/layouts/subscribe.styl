@@ -1,7 +1,7 @@
 .subscribe-view
   padding 2em 0
   min-height 100%
-  background-image url('../images/subscribe-view-background.jpg')
+  background-image url('../images/subscribe-background.jpg')
   background-size cover
   background-position center
   position relative
@@ -11,6 +11,7 @@
   text-transform uppercase
   font-size $size--femto
   font-family $font--headings
+  font-weight $weight--light
   letter-spacing rem(1px)
   color $color--dark-gray
   +media-query( $screen, $bp--tablet )
@@ -22,30 +23,34 @@
 .subscribe__text
   margin 0 auto
   font-size $size--pico
+  font-family $font--headings--condenced
+  letter-spacing rem(0.5px)
   color $color--dark-gray
   +media-query( $screen, $bp--tablet )
     width 550px
   +media-query( $screen, $bp--desktop )
     width 650px
-    font-size $size--nano
+    font-size $size--micro
 
 .subscribe__input
   box-sizing border-box
   padding-left 1.25em
   padding-right 1.25em
-  height 50px
-  font-size $size--pico
-  line-height 50px
+  height rem(50px)
+  font-size $size--nano
+  font-weight $weight--thin
+  letter-spacing rem(1px)
+  line-height rem(50px)
   color $color--light-gray
-  background #212125
-  border solid 1px #212125
-  border-left solid 1px #27272b
-  border-bottom solid 1px #29292d
+  background #17171f
+  border solid 1px #17171f
+  border-left solid 1px #1f1f27
+  border-bottom solid 1px #1f1f27
   width 100%
   +placeholder()
-    font-size $size--femto
-    line-height 50px
-    font-weight 100
+    font-size $size--atto
+    line-height rem(50px)
+    font-weight $weight--thin
     color #414346
     text-transform uppercase
     text-align center

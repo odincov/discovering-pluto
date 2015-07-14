@@ -8,17 +8,17 @@
     "seconds": "Sec"
   },
 
-  "content": "The New Horizons spacecraft will pass Pluto at its closest approach on July 14, 2015 at 11:49:59 UTC.",
+  "content": "The New Horizons spacecraft will pass Pluto at its closest approach on<br>July 14, 2015 at 11:49:59 UTC.",
 
-  "invitation-title": "Receive a reminder",
-  "invitation": "Subscribe to receive a reminder about New Horizons rendezvous with Pluto and other notifications about the mission.",
+  "invitation-title": "Receive a notification",
+  "invitation": "We're are hoping to launch soon and share with you the exciting history<br>of the discovery of Pluto! Subscribe to receive a notification.",
   "email": "Email address",
   "send": "Subscribe",
 
   "thanks-title": "Thank you!",
   "thanks-msg": [
-    "A reminder will be emailed to you on the day of the event.",
-    "Would you like to support <a href=\"#\">this website</a>? By donating, you help us create further projects that popularize scientific knowledge."
+    "A notification will be emailed to you on the day of the launch.",
+    "Would you like to <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W9BW8Q42HE9PL\">support this website</a>? By donating, you help us create further projects that popularize scientific knowledge."
   ],
 
   "error": "Oops! Make sure that the email address you entered is correct.",

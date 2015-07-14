@@ -1,6 +1,6 @@
 #block-mission-countdown.subscribe-view.u-centering-wrapper.js-nav-block(data-title= subscribeView['title'])
   .u-centered
-    h2.heading--l!= subscribeView['title']
+    h2.heading.heading--l!= subscribeView['title']
     .timer
       ul.timer__list
         li
@@ -21,11 +21,11 @@
         li
           span.timer__number.timer__number--seconds
           span.timer__unit-title= subscribeView['counter']['seconds']
-    p.subscribe__date= subscribeView['content']
+    p.subscribe__date!= subscribeView['content']
     hr
     .subscribe__form-wrapper
       h3.heading.heading--subscribe-title= subscribeView['invitation-title']
-      p.subscribe__text= subscribeView['invitation']
+      p.subscribe__text!= subscribeView['invitation']
       form
         .subscribe__form-group
           input#subscribe_email.subscribe__input(type='text', placeholder= subscribeView['email'])
@@ -36,4 +36,14 @@
     .subscribe__thank-you-wrapper
       h4.heading.heading--m= subscribeView['thanks-title']
       p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][0]
-      //p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][1]
+      p.subscribe__thank-you-msg!= subscribeView['thanks-msg'][1]
+    ul.social-networks
+      li
+        a.icon.icon-twitter(href='https://twitter.com/biguniverse_ru' target='_blank')
+      li
+        a.icon.icon-github(href='https://github.com/odincov/discovering-pluto' target='_blank')
+      li
+        a.icon.icon-facebook(href='https://www.facebook.com/biguniverse.ru' target='_blank')
+      li
+        a.icon.icon-vk(href='http://vk.com/biguniverse' target='_blank')
+    p.footer__copyright-notice= footer['copyright-notice']

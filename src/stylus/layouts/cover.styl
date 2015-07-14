@@ -9,13 +9,14 @@
 
 .cover__title
   position relative
-  font-family $font--headings--regular
-  font-weight $weight--thin
-  font-size $size--kilo
-  letter-spacing rem(5px)
-  text-transform uppercase
   margin-bottom 0
   margin-top 20%
+  font-family $font--headings--condenced
+  font-weight $weight--thin
+  font-size $size--kilo
+  line-height 0.95
+  letter-spacing rem(5px)
+  text-transform uppercase
   +media-query( $screen, $bp--tablet )
     font-size $size--tera
   +media-query( $screen, $bp--desktop )
@@ -24,7 +25,6 @@
 
 .cover__title strong
   display block
-  margin-top .15em
   font-size $size--tera
   font-weight $weight--black
   +media-query( $screen, $bp--tablet )
@@ -38,22 +38,26 @@
 
 .cover__coming-soon
   position relative
-  margin-top rem(-5px)
-  font-family $font--headings--regular
+  font-family $font--headings--condenced
   font-weight $weight--light
   font-size $size--milli
   text-transform uppercase
-  letter-spacing rem(10px)
+  letter-spacing rem(5px)
   color $color--white
-  z-index 90
+  z-index 100
+  margin-left auto
+  margin-right auto
+  +media-query( $screen, $bp--tablet )
+    width rem(550px)
+    letter-spacing rem(8px)
+  +media-query( $screen, $bp--desktop )
+    margin-top rem(-1px)
+    width rem(620px)
+    letter-spacing rem(10px)
 
 .cover__coming-soon span
   display block
-  margin-left auto
-  margin-right auto
   margin-top rem(10px)
-  width rem(600px)
-  //font-family $font--headings--regular
   font-size $size--nano
   line-height 1.25
   letter-spacing rem(2px)
@@ -66,90 +70,167 @@
   font-style italic
   letter-spacing rem(1px)
   color $color--light-gray
-  z-index 1000
+  z-index 100
 
 .cover__layer
   position absolute
+  background-repeat no-repeat
 
 .cover__layer--tombaugh
-  size 931px 885px
+  size 500px 429px
+  background-size auto 429px
   background-image url('../images/cover-clyde-tombaugh.png')
-  z-index 80
-  left 50%
-  margin-left -605px
   top 50%
-  margin-top -644px
+  left 50%
+  margin-top rem(-450px)
+  margin-left rem(-315px)
+  z-index 90
+  +media-query( $screen, $bp--tablet )
+    size 700px 668px
+    background-size auto 668px
+    margin-top rem(-550px)
+    margin-left rem(-500px)
+  +media-query( $screen, $bp--desktop )
+    background-size auto
+    size 931px 885px
+    margin-top rem(-652px)
+    margin-left rem(-665px)
 
 .cover__layer--lowell
-  size 405px 497px
   background-image url('../images/cover-percival-lowell.png')
-  z-index 60
   top 50%
-  margin-top -200px
   left 50%
-  margin-left -600px
+  z-index 80
+  +media-query( $screen, $bp--tablet )
+    size 300px 361px
+    background-size auto 361px
+    margin-top rem(-220px)
+    margin-left rem(-280px)
+  +media-query( $screen, $bp--desktop )
+    size 405px 497px
+    background-size auto
+    margin-top rem(-175px)
+    margin-left rem(-612px)
 
 .cover__layer--stern
-  size 367px 423px
   background-image url('../images/cover-alan-stern.png')
-  z-index 70
+  size 160px 183px
+  background-size auto 183px
   top 50%
   left 50%
-  margin-top -200px
-  margin-left 250px
+  margin-top rem(-275px)
+  margin-left rem(50px)
+  z-index 70
+  +media-query( $screen, $bp--tablet )
+    size 250px 285px
+    background-size auto 285px
+    margin-top rem(-225px)
+    margin-left rem(120px)
+  +media-query( $screen, $bp--desktop )
+    size 367px 423px
+    background-size auto
+    margin-top rem(-180px)
+    margin-left rem(250px)
 
 .cover__layer--new-horizons
-  size 183px 226px
+  size 90px 93px
+  background-size auto 93px
   background-image url('../images/cover-new-horizons.png')
-  z-index 50
   top 50%
   left 50%
-  margin-top -450px
-  margin-left 240px
+  margin-top rem(-375px)
+  margin-left rem(100px)
+  z-index 60
+  +media-query( $screen, $bp--tablet )
+    size 150px 156px
+    background-size auto 156px
+    margin-top rem(-395px)
+    margin-left rem(160px)
+  +media-query( $screen, $bp--desktop )
+    size 183px 226px
+    background-size auto
+    margin-top rem(-420px)
+    margin-left rem(260px)
 
 .cover__layer--pluto
-  size 68px 68px
+  size 48px
   background-image url('../images/cover-pluto.png')
-  z-index 40
+  background-size auto 48px
   top 50%
   left 50%
-  margin-top -500px
-  margin-left 200px
+  margin-top rem(-420px)
+  margin-left rem(70px)
+  z-index 50
+  +media-query( $screen, $bp--tablet )
+    size 68px
+    margin-top rem(-420px)
+    margin-left rem(100px)
+  +media-query( $screen, $bp--desktop )
+    margin-top rem(-435px)
+    margin-left rem(165px)
 
 .cover__layer--charon
-  size 18px 18px
+  size 14px
   background-image url('../images/cover-charon.png')
-  z-index 30
   top 50%
   left 50%
-  margin-top -500px
-  margin-left 150px
+  margin-top rem(-420px)
+  margin-left rem(40px)
+  z-index 40
+  +media-query( $screen, $bp--tablet )
+    size 18px
+    margin-top rem(-420px)
+    margin-left rem(70px)
+  +media-query( $screen, $bp--desktop )
+    margin-top rem(-422px)
+    margin-left rem(115px)
 
 .cover__layer--lense-flare
-  size 1365px 1565px
+  size 865px 1065px
   background-image url('../images/lense-flare.png')
-  z-index 20
+  background-size auto 1065px
   top 50%
   left 50%
-  margin-left -700px
-  margin-top -700px
+  margin-left rem(-540px)
+  margin-top rem(-580px)
+  z-index 30
+  +media-query( $screen, $bp--tablet )
+    margin-top rem(-600px)
+    margin-left rem(-490px)
+  +media-query( $screen, $bp--desktop )
+    size 1365px 1565px
+    background-size auto
+    margin-left rem(-760px)
+    margin-top rem(-780px)
 
 .cover__layer--vortex
-  size 100% 100%
-  top 0
-  left 0
-  background-size 700px auto
-  background-position center
-  background-repeat no-repeat
+  size 480px 469px
+  top 50%
+  left 50%
   background-image url('../images/cover-vortex.png')
-  z-index 10
+  background-size auto 469px
+  margin-top rem(-350px)
+  margin-left rem(-240px)
+  z-index 20
+  +media-query( $screen, $bp--tablet )
+    top 50%
+    left 50%
+    size 560px 547px
+    background-size auto 547px
+    margin-top rem(-320px)
+    margin-left rem(-275px)
+  +media-query( $screen, $bp--desktop )
+    size 764px 746px
+    background-size 764px 746px
+    margin-top rem(-360px)
+    margin-left rem(-395px)
 
 .cover__layer--glow
   size 100% 100%
   top 0
   left 0
-  background-size 1600 auto
+  background-size 1600px auto
   background-position center
   background-repeat no-repeat
   background-image url('../images/cover-glow.png')
-  z-index 10
+  z-index 15
