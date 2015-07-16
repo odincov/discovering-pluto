@@ -34,7 +34,6 @@
   "license": "ISC",
   "devDependencies": {
     "debounce": "^1.0.0",
-    "grunt": "^0.4.5",
     "gsap": "^1.15.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.0.0",
