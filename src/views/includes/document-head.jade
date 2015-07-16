@@ -5,6 +5,7 @@
 meta(charset='utf-8')
 meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
 meta(name='viewport' content='initial-scale=1.0, maximum-scale=1.0')
+meta(name='mobile-web-app-capable' content='yes')
 
 //-
 //- Project Specific
@@ -57,6 +58,7 @@ link(rel='stylesheet' href='/css/icons.svg.css', charset='utf-8')
 //-
 //- Fonts
 //-
+
 link(href='http://fast.fonts.net/cssapi/f42e6842-8db1-43f1-9ca3-766b4e031b56.css' rel='stylesheet' type='text/css') 
 link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' rel='stylesheet' type='text/css')
 
@@ -81,26 +83,27 @@ block headScripts
 //- ICONS / IMAGES / DEVICE SPECIFICS
 //-
 
-link(rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon')
+link(rel='shortcut icon' href='/images/meta/favicon-32.ico' type='image/x-icon')
 
 //-
 //- iOS App Icons / Title
 //-
 
-//- meta(name='apple-mobile-web-app-title' content='')
-//- link(rel='apple-touch-icon' href='images/meta/57_57.png'   sizes='57x57')
-//- link(rel='apple-touch-icon' href='images/meta/114_114.png' sizes='114x114')
-//- link(rel='apple-touch-icon' href='images/meta/120_120.png' sizes='120x120')
-//- link(rel='apple-touch-icon' href='images/meta/72_72.png'   sizes='72x72')
-//- link(rel='apple-touch-icon' href='images/meta/76_76.png'   sizes='76x76')
-//- link(rel='apple-touch-icon' href='images/meta/144_144.png' sizes='144x144')
-//- link(rel='apple-touch-icon-precomposed' href='images/meta/152_152.png' sizes='152x152')
+meta(name='apple-mobile-web-app-capable' content='yes')
+link(rel='apple-touch-startup-image' href='meta/startup-image.png')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-57.png' sizes='57x57')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-114.png' sizes='114x114')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-120.png' sizes='120x120')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-72.png' sizes='72x72')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-76.png' sizes='76x76')
+link(rel='apple-touch-icon' href='/images/meta/touch-icon-144.png' sizes='144x144')
+link(rel='apple-touch-icon-precomposed' href='/images/meta/touch-icon-152.png' sizes='152x152')
 
 
 //-
 //- Microsoft Pinned Tile
 //-
 
-//- meta(name='application-name' content='')
-//- meta(name='msapplication-TileImage' content='images/meta/144_144.png')
-//- meta(name='msapplication-TileColor' content='#ffffff')
+meta(name='application-name' content= meta.title)
+meta(name='msapplication-TileImage' content='/images/meta/touch-icon-144.png')
+meta(name='msapplication-TileColor' content='#010825')
