@@ -1,9 +1,9 @@
 {
   "title": "The History of the Discovery of Pluto",
-  "description": "A website about the search, discovery and exploration of Pluto — a dwarf planet on the edge of the Solar System.",
+  "description": "Timeline about the search, discovery and exploration of Pluto. Learn how we have been putting together the puzzle about this enigmatic world on the edge of the Solar System.",
   "url": "http://www.discoveringpluto.com/",
-  "image": "http://www.discoveringpluto.com/images/fb-preview.jpg",
+  "image": "http://www.discoveringpluto.com/images/og-image--en.jpg",
   "author": "www.biguniverse.ru",
-  "keywords": "Pluto Charon Dwarf Planet New Horizons Discovery Percival Lowell Clyde Tombaugh Alan Stern",
-  "twitterAccount": "@biguniverse_ru"
+  "keywords": "Pluto, Pluto discovery, Pluto moons, ninth planet, dwarf planet, Charon, Hydra, Nix, Styx, Kerberos, Kuiper Belt, Percival Lowell, Clyde Tombaugh, Alan Stern, James Christy, Mark Showalter, Venetia Burney, New Horizons",
+  "twitterAccount": "@PlutoHistory"
 }
