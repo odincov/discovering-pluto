@@ -42,9 +42,9 @@ gulp.task('jade', function () {
       attributions: require(dataPath+'/attributions.json'),
       acknowledgements: require(dataPath+'/acknowledgements.json')
     };
-    return gulp.src('./src/views/pages/layout.jade')
+    return gulp.src('./src/views/*.jade')
       .pipe(jade({locals: data}))
-      .pipe(gulp.dest('./dist/'+lang+'/index.html'))
+      .pipe(gulp.dest('./dist/'+lang+'/'))
   });
 
   return merge(tasks);
