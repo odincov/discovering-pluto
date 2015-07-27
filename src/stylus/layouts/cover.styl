@@ -2,35 +2,38 @@
   position relative
   overflow hidden
   min-height 100%
-  //background-image url('../images/cover-background.jpg')
-  background-color #010825
+  background-color #011025
   background-size cover
   background-position center
 
 .cover__title
   position relative
+  margin-top 35%
   margin-bottom 0
-  margin-top 20%
   font-family $font--headings--condenced
   font-weight $weight--thin
-  font-size $size--kilo
-  line-height 0.95
+  font-size $size--milli
+  line-height 1
   letter-spacing rem(5px)
   text-transform uppercase
   +media-query( $screen, $bp--tablet )
-    font-size $size--tera
+    margin-top 20%
+    font-size $size--mega
   +media-query( $screen, $bp--desktop )
+    font-size $size--tera
+  +media-query( $screen, $bp--desktop--medium )
     font-size $size--peta
   z-index 100
 
 .cover__title strong
   display block
-  font-size $size--tera
+  font-size $size--peta
   font-weight $weight--black
   +media-query( $screen, $bp--tablet )
     margin-top 0
     font-size $size--exa
-  +media-query( $screen, $bp--tablet--landscape )
+  +media-query( $screen, $bp--desktop )
+    margin-top auto
     font-size $size--zetta
   +media-query( $screen, $bp--desktop--medium )
     margin-top auto
@@ -40,29 +43,41 @@
   position relative
   font-family $font--headings--condenced
   font-weight $weight--light
-  font-size $size--milli
+  font-size $size--pico
   text-transform uppercase
-  letter-spacing rem(5px)
+  letter-spacing rem(3px)
   color $color--white
   z-index 100
   margin-left auto
   margin-right auto
   +media-query( $screen, $bp--tablet )
-    width rem(550px)
-    letter-spacing rem(8px)
-  +media-query( $screen, $bp--desktop )
     margin-top rem(-1px)
-    width rem(620px)
+    font-size $size--milli
+    width rem(450px)
+    letter-spacing rem(6px)
+  +media-query( $screen, $bp--tablet--landscape )
+    width rem(450px)
+  +media-query( $screen, $bp--desktop )
+    width rem(500px)
+    letter-spacing rem(8px)
+  +media-query( $screen, $bp--desktop--medium )
+    width rem(550px)
     letter-spacing rem(10px)
 
 .cover__coming-soon span
   display block
   margin-top rem(10px)
-  font-size $size--nano
-  line-height 1.25
-  letter-spacing rem(2px)
+  padding 0 rem(10px)
+  font-size $size--pico
+  line-height 1.4
+  letter-spacing rem(1px)
   text-transform none
   color $color--light-gray
+  +media-query( $screen, $bp--tablet )
+    padding 0
+    font-size $size--nano
+    line-height 1.25
+    letter-spacing rem(2px)
 
 .cover__ui-hint
   position relative
@@ -74,163 +89,225 @@
 
 .cover__layer
   position absolute
+  top 50%
+  left 50%
   background-repeat no-repeat
 
 .cover__layer--tombaugh
+  retina-image('../images/cover/clyde-tombaugh.png', auto 429px)
   size 500px 429px
-  background-size auto 429px
-  background-image url('../images/cover-clyde-tombaugh.png')
-  top 50%
-  left 50%
-  margin-top rem(-450px)
-  margin-left rem(-315px)
+  margin-top rem(-360px)
+  margin-left rem(-330px)
   z-index 90
   +media-query( $screen, $bp--tablet )
-    size 700px 668px
-    background-size auto 668px
+    size 697px 599px
+    background-size auto 599px
     margin-top rem(-550px)
-    margin-left rem(-500px)
+    margin-left rem(-510px)
+  +media-query( $screen, $bp--tablet--landscape )
+    size 697px 599px
+    background-size auto 599px
+    margin-top rem(-470px)
+    margin-left rem(-510px)
   +media-query( $screen, $bp--desktop )
-    background-size auto
-    size 931px 885px
+    background-size auto 670px
+    size 780px 670px
+    margin-top rem(-530px)
+    margin-left rem(-550px)
+  +media-query( $screen, $bp--desktop--medium )
+    background-size auto 894px
+    size 1017px 894px
     margin-top rem(-652px)
-    margin-left rem(-665px)
+    margin-left rem(-750px)
 
 .cover__layer--lowell
-  background-image url('../images/cover-percival-lowell.png')
-  top 50%
-  left 50%
+  display none // hide this image on mobile devices
+  retina-image('../images/cover/percival-lowell.png', auto 200px)
+  size 500px 429px
   z-index 80
   +media-query( $screen, $bp--tablet )
-    size 300px 361px
+    display block
     background-size auto 361px
-    margin-top rem(-220px)
-    margin-left rem(-280px)
+    size 300px 361px
+    margin-top rem(-230px)
+    margin-left rem(-390px)
+  +media-query( $screen, $bp--tablet--landscape )
+    margin-top rem(-200px)
+    margin-left rem(-440px)
   +media-query( $screen, $bp--desktop )
     size 405px 497px
-    background-size auto
-    margin-top rem(-175px)
-    margin-left rem(-612px)
+    background-size auto 497px
+    margin-top rem(-170px)
+    margin-left rem(-500px)
+  +media-query( $screen, $bp--desktop--medium )
+    margin-top rem(-170px)
+    margin-left rem(-660px)
 
 .cover__layer--stern
-  background-image url('../images/cover-alan-stern.png')
+  display none // hide this image on mobile devices
+  retina-image('../images/cover/alan-stern.png', auto 183px)
   size 160px 183px
-  background-size auto 183px
   top 50%
   left 50%
   margin-top rem(-275px)
   margin-left rem(50px)
   z-index 70
   +media-query( $screen, $bp--tablet )
+    display block
     size 250px 285px
     background-size auto 285px
     margin-top rem(-225px)
     margin-left rem(120px)
+  +media-query( $screen, $bp--tablet--landscape )
+    margin-top rem(-200px)
+    margin-left rem(180px)
   +media-query( $screen, $bp--desktop )
-    size 367px 423px
-    background-size auto
-    margin-top rem(-180px)
-    margin-left rem(250px)
+    size 320px 364px
+    background-size auto 364px
+    margin-top rem(-165px)
+    margin-left rem(210px)
+  +media-query( $screen, $bp--desktop--medium )
+    margin-top rem(-160px)
+    margin-left rem(270px)
 
 .cover__layer--new-horizons
+  retina-image('../images/cover/new-horizons.png', auto 93px)
   size 90px 93px
-  background-size auto 93px
-  background-image url('../images/cover-new-horizons.png')
-  top 50%
-  left 50%
-  margin-top rem(-375px)
-  margin-left rem(100px)
+  margin-top rem(-275px)
+  margin-left rem(75px)
   z-index 60
   +media-query( $screen, $bp--tablet )
     size 150px 156px
     background-size auto 156px
-    margin-top rem(-395px)
-    margin-left rem(160px)
+    margin-top rem(-365px)
+    margin-left rem(100px)
+  +media-query( $screen, $bp--tablet--landscape )
+    margin-top rem(-245px)
+    margin-left rem(85px)
   +media-query( $screen, $bp--desktop )
-    size 183px 226px
-    background-size auto
+    size 210px 217px
+    background-size auto 217px
+    margin-top rem(-340px)
+    margin-left rem(120px)
+  +media-query( $screen, $bp--desktop--medium )
     margin-top rem(-420px)
-    margin-left rem(260px)
+    margin-left rem(190px)
 
 .cover__layer--pluto
-  size 48px
-  background-image url('../images/cover-pluto.png')
-  background-size auto 48px
-  top 50%
-  left 50%
-  margin-top rem(-420px)
-  margin-left rem(70px)
-  z-index 50
+  retina-image('../images/cover/pluto.png', auto 35px)
+  size 35px
+  margin-top rem(-180px)
+  margin-left rem(-85px)
+  z-index 40
   +media-query( $screen, $bp--tablet )
-    size 68px
-    margin-top rem(-420px)
+    background-size 45px
+    size 45px
+    margin-top rem(-435px)
+    margin-left rem(100px)
+  +media-query( $screen, $bp--tablet--landscape )
+    margin-top rem(-275px)
     margin-left rem(100px)
   +media-query( $screen, $bp--desktop )
+    margin-top rem(-350px)
+    margin-left rem(135px)
+  +media-query( $screen, $bp--desktop--medium )
+    background-size 70px
+    size 70px
     margin-top rem(-435px)
     margin-left rem(165px)
 
 .cover__layer--charon
-  size 14px
-  background-image url('../images/cover-charon.png')
-  top 50%
-  left 50%
-  margin-top rem(-420px)
-  margin-left rem(40px)
-  z-index 40
+  retina-image('../images/cover/charon.png', auto 16px)
+  size 16px
+  margin-top rem(-170px)
+  margin-left rem(-65px)
+  z-index 50
   +media-query( $screen, $bp--tablet )
-    size 18px
-    margin-top rem(-420px)
+    background-size 22px
+    size 22px
+    margin-top rem(-440px)
+    margin-left rem(50px)
+  +media-query( $screen, $bp--tablet--landscape )
+    margin-top rem(-285px)
     margin-left rem(70px)
   +media-query( $screen, $bp--desktop )
-    margin-top rem(-422px)
-    margin-left rem(115px)
+    margin-top rem(-355px)
+    margin-left rem(100px)
+  +media-query( $screen, $bp--desktop--medium )
+    size 35px
+    margin-top rem(-435px)
+    margin-left rem(100px)
 
 .cover__layer--lense-flare
-  size 865px 1065px
-  background-image url('../images/lense-flare.png')
+  display none // hide this image on mobile devices
+  background-image url('../images/common/lense-flare.png')
   background-size auto 1065px
-  top 50%
-  left 50%
+  size 865px 1065px
   margin-left rem(-540px)
   margin-top rem(-580px)
   z-index 30
   +media-query( $screen, $bp--tablet )
-    margin-top rem(-600px)
-    margin-left rem(-490px)
+    display block
+    background-size auto 985px
+    size 800px 985px
+    margin-top rem(-650px)
+    margin-left rem(-530px)
   +media-query( $screen, $bp--desktop )
+    background-size auto 1565px
     size 1365px 1565px
-    background-size auto
+    margin-left rem(-790px)
+    margin-top rem(-850px)
+  +media-query( $screen, $bp--desktop--medium )
     margin-left rem(-760px)
     margin-top rem(-780px)
 
 .cover__layer--vortex
-  size 480px 469px
-  top 50%
-  left 50%
-  background-image url('../images/cover-vortex.png')
-  background-size auto 469px
-  margin-top rem(-350px)
-  margin-left rem(-240px)
+  retina-image('../images/cover/vortex.png', auto 351px)
+  size 360px 351px
+  margin-top rem(-200px)
+  margin-left rem(-170px)
   z-index 20
   +media-query( $screen, $bp--tablet )
-    top 50%
-    left 50%
-    size 560px 547px
-    background-size auto 547px
-    margin-top rem(-320px)
+    background-size auto 590px
+    size 604px 590px
+    margin-top rem(-400px)
+    margin-left rem(-305px)
+  +media-query( $screen, $bp--tablet--landscape )
+    background-size auto 488px
+    size 500px 488px
+    margin-top rem(-260px)
     margin-left rem(-275px)
   +media-query( $screen, $bp--desktop )
-    size 764px 746px
+    background-size 635px 620px
+    size 635px 620px
+    margin-top rem(-340px)
+    margin-left rem(-330px)
+  +media-query( $screen, $bp--desktop--medium )
     background-size 764px 746px
+    size 764px 746px
     margin-top rem(-360px)
     margin-left rem(-395px)
 
+.cover__layer--milkyway
+  display none // hide this image on mobile devices
+  retina-image('../images/common/milkyway.png', 1895px auto)
+  z-index 15
+  +media-query( $screen, $bp--tablet )
+    display block
+    background-position center
+    background-repeat repeat-x
+    size 100% 100%
+    top 0
+    left 0
+
 .cover__layer--glow
+  background-image url('../images/cover/glow.png')
+  background-size 800px auto
   size 100% 100%
   top 0
   left 0
-  background-size 1600px auto
   background-position center
   background-repeat no-repeat
-  background-image url('../images/cover-glow.png')
-  z-index 15
+  z-index 10
+  +media-query( $screen, $bp--tablet )
+    background-size 1600px auto
